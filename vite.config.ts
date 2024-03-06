@@ -40,6 +40,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/shared/components'),
       },
       {
+        find: '@shadcn-ui',
+        replacement: path.resolve(__dirname, 'src/shared/shadcn-ui'),
+      },
+      {
         find: '@styles',
         replacement: path.resolve(__dirname, 'src/shared/styles'),
       },

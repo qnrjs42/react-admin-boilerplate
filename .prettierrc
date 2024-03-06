@@ -11,6 +11,7 @@
   "importOrder": [
     "lodash",
     "<THIRD_PARTY_MODULES>",
+    "^@shadcn-ui/(.*)$",
     "^@interfaces/(.*)$",
     "^@hooks/(.*)$",
     "^@stores/(.*)$",
