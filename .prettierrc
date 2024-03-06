@@ -11,6 +11,18 @@
   "importOrder": [
     "lodash",
     "<THIRD_PARTY_MODULES>",
+    "^@interfaces/(.*)$",
+    "^@hooks/(.*)$",
+    "^@stores/(.*)$",
+    "^@utils/(.*)$",
+    "^@constants/(.*)$",
+    "^@src/(.*)$",
+    "^@pages/(.*)$",
+    "^@widgets/(.*)$",
+    "^@features/(.*)$",
+    "^@entities/(.*)$",
+    "^@components/(.*)$",
+    "^@styles/(.*)$",
     "^[./].(?!styles)",
     "./styles"
   ],
