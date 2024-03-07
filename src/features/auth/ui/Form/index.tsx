@@ -1,19 +1,16 @@
 import type { FC } from 'react';
 import type { UseFormReturn } from 'react-hook-form';
 
-import { Button } from '@shadcn-ui/components/ui/button';
-import { Form, FormField } from '@shadcn-ui/components/ui/form';
+import { Button } from '@shadcn-ui/ui/button';
+import { Form, FormField } from '@shadcn-ui/ui/form';
+
+import type { LoginFormDto } from '@entities/auth';
 
 import { SharedFormFieldRender } from '@components';
 
-interface ILoginForm {
-  email: string;
-  password: string;
-}
-
 interface IProps {
   title: string;
-  form: UseFormReturn<ILoginForm>;
+  form: UseFormReturn<LoginFormDto>;
   onSubmit: () => Promise<void>;
 }
 const LoginForm: FC<IProps> = ({ title, form, onSubmit }) => {
