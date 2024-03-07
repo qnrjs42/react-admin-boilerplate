@@ -27,11 +27,10 @@
       "@features/*": ["src/features/*"],
       "@entities/*": ["src/entities/*"],
       "@utils/*": ["src/shared/utils/*"],
-      "@constants/*": ["src/shared/constants/*"],
-      "@interfaces/*": ["src/shared/interfaces/*"],
+      "@types/*": ["src/shared/types/*"],
       "@shadcn-ui/*": ["src/shared/shadcn-ui/*"],
-      "@styles/*": ["src/shared/styles/*"],
       "@components": ["src/shared/components/index.tsx"],
+      "@styles/*": ["src/shared/styles/*"],
       "@theme": ["src/shared/styles/theme.ts"],
       "@config": ["./config/config.json"],
       "@src/*": ["src/*"]
