@@ -29,6 +29,7 @@
       "@utils/*": ["src/shared/utils/*"],
       "@types/*": ["src/shared/types/*"],
       "@shadcn-ui/*": ["src/shared/shadcn-ui/*"],
+      "@constants": ["src/shared/constants/index.ts"],
       "@components": ["src/shared/components/index.tsx"],
       "@styles/*": ["src/shared/styles/*"],
       "@theme": ["src/shared/styles/theme.ts"],

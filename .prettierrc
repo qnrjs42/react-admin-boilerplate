@@ -18,6 +18,7 @@
     "^@entities/(.*)$",
     "^@utils/(.*)$",
     "^@types/(.*)$",
+    "^@constants$",
     "^@components$",
     "^@config$",
     "^@src/(.*)$",
