@@ -9,6 +9,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
+import { Toaster } from '@shadcn-ui/ui/toaster.tsx';
+
 import utilQueryClient from '@utils/utilQueryClient.ts';
 
 import App from './App.tsx';
@@ -31,6 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       {process.env.NODE_ENV === 'development' && <ReactQueryDevtools />}
       <BrowserRouter>
         <App />
+        <Toaster />
       </BrowserRouter>
     </QueryClientProvider>
   </React.StrictMode>,

@@ -1,7 +1,7 @@
 import type { ControllerRenderProps } from 'react-hook-form';
 
-import { FormControl, FormItem, FormLabel, FormMessage } from '@shadcn-ui/components/ui/form';
-import { Input } from '@shadcn-ui/components/ui/input';
+import { FormControl, FormItem, FormLabel, FormMessage } from '@shadcn-ui/ui/form';
+import { Input } from '@shadcn-ui/ui/input';
 
 interface IProps<TName extends string> {
   label: string;
