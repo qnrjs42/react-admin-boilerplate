@@ -36,12 +36,12 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/shared/interfaces'),
       },
       {
-        find: '@components',
-        replacement: path.resolve(__dirname, 'src/shared/components'),
-      },
-      {
         find: '@shadcn-ui',
         replacement: path.resolve(__dirname, 'src/shared/shadcn-ui'),
+      },
+      {
+        find: '@components',
+        replacement: path.resolve(__dirname, 'src/shared/components/index.tsx'),
       },
       {
         find: '@styles',

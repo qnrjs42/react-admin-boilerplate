@@ -29,15 +29,15 @@
       "@utils/*": ["src/shared/utils/*"],
       "@constants/*": ["src/shared/constants/*"],
       "@interfaces/*": ["src/shared/interfaces/*"],
-      "@components/*": ["src/shared/components/*"],
       "@shadcn-ui/*": ["src/shared/shadcn-ui/*"],
       "@styles/*": ["src/shared/styles/*"],
+      "@components": ["src/shared/components/index.tsx"],
       "@theme": ["src/shared/styles/theme.ts"],
       "@config": ["./config/config.json"],
       "@src/*": ["src/*"]
     }
   },
   "include": ["src", "**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-  "exclue": ["node_modules", "dist", "build", "tailwind.config.js"],
+  "exclude": ["node_modules", "dist", "build", "tailwind.config.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

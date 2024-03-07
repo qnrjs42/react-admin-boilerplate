@@ -22,7 +22,7 @@
     "^@widgets/(.*)$",
     "^@features/(.*)$",
     "^@entities/(.*)$",
-    "^@components/(.*)$",
+    "^@components$",
     "^@styles/(.*)$",
     "^[./].(?!styles)",
     "./styles"
