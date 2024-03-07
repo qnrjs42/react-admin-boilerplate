@@ -1,9 +1,16 @@
 import type { FC } from 'react';
 
-import { Button } from '@shadcn-ui/components/ui/button';
+import { useAuthLogin } from '@features/auth/hooks';
+import { LoginForm, LoginMainImage } from '@features/auth/ui';
 
 const LoginPage: FC = () => {
-  return <Button variant='outline'>Login</Button>;
+  const { form, onSubmit } = useAuthLogin();
+  return (
+    <div className='flex flex-row h-screen'>
+      <LoginForm title='TITLE' form={form} onSubmit={onSubmit} />
+      <LoginMainImage />
+    </div>
+  );
 };
 
 export default LoginPage;

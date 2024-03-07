@@ -36,6 +36,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/shared/shadcn-ui'),
       },
       {
+        find: '@constants',
+        replacement: path.resolve(__dirname, 'src/shared/constants/index.ts'),
+      },
+      {
         find: '@components',
         replacement: path.resolve(__dirname, 'src/shared/components/index.tsx'),
       },
