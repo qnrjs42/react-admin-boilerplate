@@ -14,8 +14,8 @@ interface IProps {
 }
 const LoginForm: FC<IProps> = ({ title, form, onSubmit }) => {
   return (
-    <div className='flex flex-col flex-1 px-5 justify-center items-center'>
-      <h1 className='text-3xl font-bold mb-4'>{title}</h1>
+    <div className='flex flex-col items-center justify-center flex-1 px-5'>
+      <h1 className='mb-4 text-3xl font-bold'>{title}</h1>
       <Form {...form}>
         <form onSubmit={onSubmit} className='space-y-4 w-full max-w-[436px]'>
           <FormField
@@ -34,7 +34,7 @@ const LoginForm: FC<IProps> = ({ title, form, onSubmit }) => {
           />
           <div className='h-1' />
           <div className='text-center'>
-            <Button className='w-36 text-base' type='submit'>
+            <Button className='text-base w-36' type='submit'>
               로그인
             </Button>
           </div>

@@ -11,7 +11,7 @@ interface IProps<TName extends string> {
 const SharedFormFieldRender = <TName extends string>(props: IProps<TName>) => {
   return (
     <FormItem>
-      <FormLabel className='text-[--color-8a92a6]'>{props.label}</FormLabel>
+      <FormLabel>{props.label}</FormLabel>
       <FormControl>
         <Input type={props.type} {...props.field} />
       </FormControl>
