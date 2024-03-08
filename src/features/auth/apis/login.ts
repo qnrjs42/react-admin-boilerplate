@@ -1,11 +1,9 @@
+import axios from 'axios';
+
 import type { LoginFormDto } from '@entities/auth';
 
-import { utilTimeSleep } from '@utils/util';
-
-const apiAuthLogin = async (data: LoginFormDto) => {
-  console.log(data);
-  // throw new Error('test');
-  await utilTimeSleep(1);
+const apiAuthLogin = async (data: LoginFormDto): Promise<void> => {
+  await axios.post('/api/auth/login/email', data);
 };
 
 export default apiAuthLogin;

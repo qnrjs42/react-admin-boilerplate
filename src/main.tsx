@@ -27,14 +27,27 @@ axios.defaults.baseURL = '';
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 axios.defaults.withCredentials = true; // front, backend 간 쿠키공유
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <QueryClientProvider client={utilQueryClient()}>
-      {process.env.NODE_ENV === 'development' && <ReactQueryDevtools />}
-      <BrowserRouter>
-        <App />
-        <Toaster />
-      </BrowserRouter>
-    </QueryClientProvider>
-  </React.StrictMode>,
-);
+const enableMocking = async () => {
+  if (process.env.NODE_ENV !== 'development') return;
+  const { worker } = await import('./mocks/browser');
+
+  // https://stackoverflow.com/questions/68024935/msw-logging-warnings-for-unhandled-supertest-requests
+  // bypass 해줘야 불필요한 warning 안뜸
+  return worker.start({
+    onUnhandledRequest: 'bypass',
+  });
+};
+
+enableMocking().then(() => {
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+      <QueryClientProvider client={utilQueryClient()}>
+        {process.env.NODE_ENV === 'development' && <ReactQueryDevtools />}
+        <BrowserRouter>
+          <App />
+          <Toaster />
+        </BrowserRouter>
+      </QueryClientProvider>
+    </React.StrictMode>,
+  );
+});
