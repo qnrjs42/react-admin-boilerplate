@@ -10,6 +10,17 @@ pnpm install
 pnpm dev
 ```
 
+## VSCode Extensions
+
+1. Tailwind CSS IntelliSense -> https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+2. ESLint -> https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+3. Prettier -> https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+4. Headwind -> https://marketplace.visualstudio.com/items?itemName=heybourn.headwind
+
+### ❗️ 주의
+
+1. Headwind extension은 CMD + Shift + T 단축키와 충돌이 있을 수 있습니다. 충돌이 발생하면 단축키를 변경하거나 해당 extension을 비활성화 해주세요.
+
 ## FSD 폴더 구조
 
 - https://www.youtube.com/watch?v=64Fx5Y1gEOA
@@ -39,7 +50,13 @@ pnpm dev
 
 ### FSD 규칙
 
-1. pages -> widgets -> features -> entities -> shared 순으로 의존성을 갖는다.
-   즉, features는 entities를 참조할 수 있지만, entities는 features를 참조할 수 없다.
-2. features 레이어의 slices는 apis, hooks, ui로 나뉜다.
-3. entities 레이어의 slices는 contracts, keys, types로 나뉜다.
+1. pages -> widgets -> features -> entities -> shared 순으로 의존성을 갖습니다.
+   즉, features는 entities를 참조할 수 있지만, entities는 features를 참조할 수 없습니다.
+2. features 레이어의 slices는 apis, hooks, ui로 나눕니다.
+3. entities 레이어의 slices는 contracts, keys, types로 나눕니다.
+
+## storybook
+
+```shell
+npx -p @storybook/cli sb init
+```
