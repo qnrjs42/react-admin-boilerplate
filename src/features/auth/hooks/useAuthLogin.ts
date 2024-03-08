@@ -3,7 +3,7 @@ import { useMutation } from '@tanstack/react-query';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
-import { useToast } from '@shadcn-ui/ui/use-toast';
+import { useToast } from '@shadcn-ui/hooks';
 
 import { apiAuthLogin } from '@features/auth/apis';
 

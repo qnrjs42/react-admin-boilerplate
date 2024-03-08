@@ -1,8 +1,7 @@
 import type { FC } from 'react';
 import type { UseFormReturn } from 'react-hook-form';
 
-import { Button } from '@shadcn-ui/ui/button';
-import { Form, FormField } from '@shadcn-ui/ui/form';
+import { Button, Form, FormField } from '@shadcn-ui/ui';
 
 import type { LoginFormDto } from '@entities/auth';
 

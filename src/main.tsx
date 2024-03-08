@@ -9,7 +9,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
-import { Toaster } from '@shadcn-ui/ui/toaster.tsx';
+import { Toaster } from '@shadcn-ui/ui';
 
 import utilQueryClient from '@utils/utilQueryClient.ts';
 
