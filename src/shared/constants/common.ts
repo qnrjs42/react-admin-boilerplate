@@ -22,3 +22,9 @@ export const INPUT_TYPE_ATTRIBUTES: string[] = [
   'url',
   'week',
 ] as const;
+
+export const TOAST_DURATION = {
+  SUCCESS: 2000,
+  WARNING: 3000,
+  ERROR: 3000,
+} as const;

@@ -10,6 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --color-8a92a6: #8a92a6;
+  --color-adb5bd: #adb5bd;
 }
 
 * {
@@ -36,6 +37,7 @@
 body {
   min-height: 100vh;
   margin: 0;
+  background-color: #e9ecef;
 }
 
 #root {

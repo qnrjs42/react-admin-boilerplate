@@ -11,8 +11,22 @@ export const authLoginEmail = http.post<never, LoginEmailBody>(
     const body = await request.json();
 
     return HttpResponse.json({
-      email: body?.email,
-      authorization: 'Bearer token',
+      data: {
+        email: body?.email,
+        authorization: 'Bearer token',
+      },
     });
   },
 );
+
+export const authLogout = http.post<never>('/api/auth/logout', () => {
+  return HttpResponse.json({});
+});
+
+export const authUser = http.get<never>('/api/auth/user', () => {
+  return HttpResponse.json({
+    data: {
+      nickname: 'John Doe',
+    },
+  });
+});
