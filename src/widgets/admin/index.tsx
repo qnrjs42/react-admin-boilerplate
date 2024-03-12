@@ -1,18 +1,15 @@
 import { type FC, useState, useEffect } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
 
-import SidebarWidget from '@widgets/sidebar';
+import { HeaderWidget, RightWidget, SidebarWidget } from '@widgets/.';
 
 import type { IMenuRoute } from '@typings/common';
-
-import useSidebarStore from '@stores/sidebar';
 
 import { NESTED_ROUTES, LIST_REGEXP } from '@src/shared/constants';
 
 const AdminWidget: FC = () => {
   const location = useLocation();
   const params = useParams();
-  const isSidebarOpen = useSidebarStore<boolean>(state => state.isSidebarOpen);
 
   const [currentRoute, setCurrentRoute] = useState<IMenuRoute | null>(null);
 
@@ -46,16 +43,14 @@ const AdminWidget: FC = () => {
 
   return (
     <div className='max-w[1920px] mx-auto flex'>
-      <div>
-        <div>
-          <SidebarWidget currentRoute={currentRoute} nestedRoutes={NESTED_ROUTES} />
-        </div>
-        {/* <HeaderWidget /> */}
+      <SidebarWidget currentRoute={currentRoute} nestedRoutes={NESTED_ROUTES} />
+      <RightWidget>
+        <HeaderWidget />
         <div>
           {/* content */}
           <Outlet />
         </div>
-      </div>
+      </RightWidget>
     </div>
   );
 };
