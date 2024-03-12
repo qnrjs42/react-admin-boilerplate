@@ -1,7 +1,9 @@
 import type { FC } from 'react';
 
+import { PageContainer } from '@components';
+
 const AdminBannerListPage: FC = () => {
-  return <>list</>;
+  return <PageContainer>list</PageContainer>;
 };
 
 export default AdminBannerListPage;
