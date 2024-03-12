@@ -22,3 +22,4 @@ export {
   ToastAction,
 } from './toast';
 export { Toaster } from './toaster';
+export { Separator } from './separator';
