@@ -1,5 +1,6 @@
+import apiAuthCertify from './certify';
 import apiAuthGetNickname from './getNickname';
 import apiAuthLogin from './login';
 import apiAuthLogout from './logout';
 
-export { apiAuthLogin, apiAuthLogout, apiAuthGetNickname };
+export { apiAuthLogin, apiAuthLogout, apiAuthGetNickname, apiAuthCertify };

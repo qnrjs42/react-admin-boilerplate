@@ -16,11 +16,15 @@ import { apiAuthGetNickname, apiAuthLogout } from '@features/auth/apis';
 
 import { AUTH_KEYS } from '@entities/auth';
 
+import useMeStore from '@stores/me';
+
 import { STORAGE_KEYS, TOAST_DURATION } from '@constants';
 
 const HeaderWidget: FC = () => {
   const { toast } = useToast();
   const queryClient = useQueryClient();
+
+  const setMe = useMeStore(state => state.setMe);
 
   const { data: nickname } = useQuery({
     queryKey: [AUTH_KEYS.GET_NICKNAME],
@@ -32,13 +36,13 @@ const HeaderWidget: FC = () => {
     localStorage.removeItem(STORAGE_KEYS.AUTHORIZATION);
 
     // 유저 정보 제거
-    // setMe(null);
+    setMe(null);
 
     // 닉네임 제거
     queryClient.removeQueries({
       queryKey: [AUTH_KEYS.GET_NICKNAME],
     });
-  }, [queryClient]);
+  }, [queryClient, setMe]);
 
   const { mutate: authLogout } = useMutation({
     mutationKey: [AUTH_KEYS.LOGOUT],
@@ -47,7 +51,7 @@ const HeaderWidget: FC = () => {
       handleClearMe();
 
       toast({
-        title: ' 로그아웃 되었습니다.',
+        title: '로그아웃 되었습니다.',
         duration: TOAST_DURATION.SUCCESS,
       });
     },

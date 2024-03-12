@@ -1,3 +1,5 @@
+export type Nullable<T> = T | null;
+
 export interface IMenuRoute {
   parentMenuName: string;
   path: string;
