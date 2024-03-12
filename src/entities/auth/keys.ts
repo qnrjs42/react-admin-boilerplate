@@ -2,4 +2,5 @@ export const AUTH_KEYS = {
   LOGIN: 'AUTH_LOGIN',
   LOGOUT: 'AUTH_LOGOUT',
   GET_NICKNAME: 'AUTH_GET_NICKNAME',
+  CERTIFY: 'AUTH_CERTIFY',
 } as const;

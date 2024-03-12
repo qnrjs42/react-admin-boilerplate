@@ -6,6 +6,12 @@ export const ROUTE_PATHS = {
   LOGIN: '/login',
   ADMIN: {
     DASHBOARD: '/admin/dashboard',
+    BANNER: {
+      ALL_LIST: '/admin/banner/all-list/1',
+      BANNER: '/admin/banner',
+      CREATE: '/admin/banner/create',
+      MODIFY: '/admin/banner/modify',
+    },
   },
 } as const;
 
@@ -28,10 +34,21 @@ export const NESTED_ROUTES: IMenuRoute[][] = [
     },
     {
       parentMenuName: 'BANNER',
-      path: '/admin/banner/demo-list/1',
-      menuName: '배너 데모 전체 리스트',
-      order: 2,
-      isShow: true,
+      path: '/admin/banner',
+      menuName: '배너 상세',
+      order: 1,
+    },
+    {
+      parentMenuName: 'BANNER',
+      path: '/admin/banner/create',
+      menuName: '배너 등록',
+      order: 1,
+    },
+    {
+      parentMenuName: 'BANNER',
+      path: '/admin/banner/modify',
+      menuName: '배너 수정',
+      order: 1,
     },
   ],
 ];
