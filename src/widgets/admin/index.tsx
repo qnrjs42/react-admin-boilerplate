@@ -1,7 +1,7 @@
 import { type FC, useState, useEffect } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
 
-import { HeaderWidget, RightWidget, SidebarWidget } from '@widgets/.';
+import { HeaderWidget, RightWidget, SidebarWidget, MainWidget, ContentWidget } from '@widgets/.';
 
 import type { IMenuRoute } from '@typings/common';
 
@@ -46,10 +46,10 @@ const AdminWidget: FC = () => {
       <SidebarWidget currentRoute={currentRoute} nestedRoutes={NESTED_ROUTES} />
       <RightWidget>
         <HeaderWidget />
-        <div>
-          {/* content */}
-          <Outlet />
-        </div>
+        <ContentWidget currentRoute={currentRoute} />
+        <MainWidget />
+        {/* content */}
+        <Outlet />
       </RightWidget>
     </div>
   );
