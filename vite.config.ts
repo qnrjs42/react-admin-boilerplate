@@ -28,8 +28,12 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/shared/utils'),
       },
       {
-        find: '@types',
-        replacement: path.resolve(__dirname, 'src/shared/types'),
+        find: '@typings',
+        replacement: path.resolve(__dirname, 'src/shared/typings'),
+      },
+      {
+        find: '@stores',
+        replacement: path.resolve(__dirname, 'src/shared/stores'),
       },
       {
         find: '@shadcn-ui',

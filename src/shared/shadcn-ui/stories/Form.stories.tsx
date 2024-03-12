@@ -29,7 +29,7 @@ const meta: Meta<typeof Form> = {
 
     return (
       <Form {...args} {...form}>
-        <form onSubmit={onSubmit} className='space-y-4 w-full max-w-[436px]'>
+        <form onSubmit={onSubmit} className='w-full max-w-[436px] space-y-4'>
           <FormField
             name='email'
             control={form.control}
@@ -44,7 +44,7 @@ const meta: Meta<typeof Form> = {
               <SharedFormFieldRender label='비밀번호' type='password' field={field} />
             )}
           />
-          <Button className='text-base w-36' type='submit'>
+          <Button className='w-36 text-base' type='submit'>
             로그인
           </Button>
         </form>
