@@ -33,10 +33,11 @@ const SidebarWidget: FC<IProps> = ({ currentRoute = null, nestedRoutes = [] }) =
             : 'pointer-events-none -translate-x-60 opacity-0',
         )}
       >
-        <NavLink to='/admin/dashboard'>
-          <h2 className='p-2.5 text-center text-3xl font-medium'>TITLE</h2>
-        </NavLink>
-        <Separator className='mb-4' />
+        <div className='mb-4 border-b'>
+          <NavLink to='/admin/dashboard'>
+            <h2 className='p-2.5 text-center text-3xl font-medium'>TITLE</h2>
+          </NavLink>
+        </div>
         {nestedRoutes.map((routes, routesIndex) => (
           <Fragment key={routes[routesIndex].path}>
             {routesIndex !== 0 ? <Separator className='mx-3 my-2 w-auto' /> : null}
