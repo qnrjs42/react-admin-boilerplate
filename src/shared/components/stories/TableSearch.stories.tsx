@@ -1,8 +1,10 @@
+import { zodResolver } from '@hookform/resolvers/zod';
 import type { Meta, StoryObj } from '@storybook/react';
+import { useForm } from 'react-hook-form';
 
-import useTableSearch from '@hooks/useTableSearch';
+import { SearchFormDto } from '@typings/common';
 
-import type { SearchFormDto } from '@typings/common';
+import { SearchFormDtoSchema } from '@src/shared/contracts/common';
 
 import { TableSearch } from '..';
 
@@ -12,21 +14,21 @@ const meta: Meta<typeof TableSearch> = {
   title: '@components/TableSearch',
   component: TableSearch,
   render: args => {
-    const onSearch = (data: SearchFormDto): void => {
-      console.log(data);
-    };
-
-    const searchForm = useTableSearch({
-      initialSearch: '제목',
-      onSearch,
+    const form = useForm<SearchFormDto>({
+      resolver: zodResolver(SearchFormDtoSchema),
+      defaultValues: {
+        search: new URLSearchParams(location.search).get('search') || '',
+      },
     });
 
-    return <TableSearch {...args} {...searchForm} />;
+    const onSubmit = form.handleSubmit((data: SearchFormDto): void => {
+      console.log(data);
+    });
+
+    return <TableSearch {...args} form={form} onSubmit={onSubmit} />;
   },
 };
 
 export default meta;
 
-export const Primary: Story = {
-  args: {},
-};
+export const Primary: Story = {};
