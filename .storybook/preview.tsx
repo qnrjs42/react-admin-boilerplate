@@ -4,8 +4,11 @@ import React from 'react';
 
 import '../src/globals.css';
 import '../src/index.css';
+import { worker } from '../src/mocks/browser';
 import { Toaster } from '../src/shared/shadcn-ui/ui';
 import utilQueryClient from '../src/shared/utils/utilQueryClient';
+
+worker.start({ onUnhandledRequest: 'bypass' });
 
 const preview: Preview = {
   parameters: {
