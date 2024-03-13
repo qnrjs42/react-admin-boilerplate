@@ -1,3 +1,7 @@
+import { z } from 'zod';
+
+import { SearchFormDtoSchema } from '../contracts/common';
+
 export type Nullable<T> = T | null;
 
 export interface IMenuRoute {
@@ -18,3 +22,5 @@ export interface IList<T> {
   total: number;
   items: T[];
 }
+
+export type SearchFormDto = z.infer<typeof SearchFormDtoSchema>;
