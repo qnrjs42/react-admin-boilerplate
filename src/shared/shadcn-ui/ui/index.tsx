@@ -41,3 +41,12 @@ export {
   DropdownMenuRadioGroup,
 } from './dropdown-menu';
 export { Skeleton } from './skeleton';
+export {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from './pagination';
