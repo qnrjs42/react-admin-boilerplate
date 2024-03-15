@@ -32,3 +32,9 @@ const meta: Meta<typeof TableSearch> = {
 export default meta;
 
 export const Primary: Story = {};
+
+export const Total: Story = {
+  args: {
+    total: 100,
+  },
+};
