@@ -26,6 +26,7 @@
       "@widgets/*": ["src/widgets/*"],
       "@features/*": ["src/features/*"],
       "@entities/*": ["src/entities/*"],
+      "@hooks/*": ["src/shared/hooks/*"],
       "@utils/*": ["src/shared/utils/*"],
       "@typings/*": ["src/shared/typings/*"],
       "@stores/*": ["src/shared/stores/*"],

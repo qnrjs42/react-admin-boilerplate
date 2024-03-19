@@ -13,7 +13,7 @@ const RightWidget: FC<IProps> = ({ children }) => {
   return (
     <div
       className={cn(
-        'flex min-h-screen w-full flex-col transition-all delay-300 ease-in-out',
+        'flex min-h-screen w-full min-w-60 flex-col transition-all delay-300 ease-in-out',
         isSidebarOpen ? 'max-w-[calc(100%-200px)]' : 'max-w-full',
         isSidebarOpen ? 'ml-60' : 'ml-0',
       )}

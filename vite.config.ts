@@ -24,6 +24,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/entities'),
       },
       {
+        find: '@hooks',
+        replacement: path.resolve(__dirname, 'src/shared/hooks'),
+      },
+      {
         find: '@utils',
         replacement: path.resolve(__dirname, 'src/shared/utils'),
       },

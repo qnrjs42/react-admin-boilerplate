@@ -42,7 +42,9 @@ enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
       <QueryClientProvider client={utilQueryClient()}>
-        {process.env.NODE_ENV === 'development' && <ReactQueryDevtools />}
+        {process.env.NODE_ENV === 'development' && (
+          <ReactQueryDevtools buttonPosition='bottom-left' />
+        )}
         <BrowserRouter>
           <App />
           <Toaster />

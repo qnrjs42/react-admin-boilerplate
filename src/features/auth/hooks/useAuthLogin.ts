@@ -17,8 +17,9 @@ import { ROUTE_PATHS, STORAGE_KEYS, TOAST_DURATION } from '@constants';
 
 const useAuthLogin = () => {
   const { toast } = useToast();
-  const setMe = useMeStore(state => state.setMe);
   const navigate = useNavigate();
+
+  const setMe = useMeStore(state => state.setMe);
 
   const { mutate: login } = useMutation({
     mutationKey: [AUTH_KEYS.LOGIN],
@@ -27,7 +28,7 @@ const useAuthLogin = () => {
       localStorage.setItem(STORAGE_KEYS.AUTHORIZATION, newMe.authorization);
       setMe(newMe);
 
-      navigate(ROUTE_PATHS.ADMIN.BANNER.ALL_LIST, { replace: true });
+      navigate(ROUTE_PATHS.ADMIN.BANNERS.ALL_LIST, { replace: true });
     },
     onError: error => {
       toast({

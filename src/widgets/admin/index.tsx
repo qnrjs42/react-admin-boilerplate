@@ -46,7 +46,7 @@ const AdminWidget: FC = () => {
       <SidebarWidget currentRoute={currentRoute} nestedRoutes={NESTED_ROUTES} />
       <RightWidget>
         <HeaderWidget />
-        <div className='relative'>
+        <div className='relative h-full'>
           <ContentWidget currentRoute={currentRoute} />
           <MainWidget />
         </div>
