@@ -139,9 +139,7 @@ const Table = <T extends IDefaultItem>({
     <div
       className={cn(
         'table-parent relative',
-        isLoading
-          ? 'min-h-[300px]'
-          : 'h-[100vh] max-h-[calc(100svh-355px)] min-h-[300px] overflow-auto',
+        isLoading ? 'min-h-[300px]' : 'min-h-[300px] overflow-auto',
       )}
       onScroll={scrollRestorationKey ? onScroll : undefined}
     >
