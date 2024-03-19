@@ -1,5 +1,9 @@
 import type { RequestHandler } from 'msw';
 
 import { authLoginEmail, authLogout, authMenu, authUser } from './apis/auth';
+import { bannerList } from './apis/banner';
 
-export const handlers: RequestHandler[] = [authLoginEmail, authLogout, authUser, authMenu];
+const authHandlers = [authLoginEmail, authLogout, authUser, authMenu];
+const bannerHandlers = [bannerList];
+
+export const handlers: RequestHandler[] = [...authHandlers, ...bannerHandlers];

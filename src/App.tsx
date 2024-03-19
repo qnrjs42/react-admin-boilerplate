@@ -1,6 +1,11 @@
 import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
 
-import { AdminBannerListPage, AdminDashboardPage } from '@pages/admin';
+import {
+  AdminBannerCreatePage,
+  AdminBannerListPage,
+  AdminBannerPage,
+  AdminDashboardPage,
+} from '@pages/admin';
 import LoginPage from '@pages/login';
 
 import AdminWidget from '@widgets/admin';
@@ -32,15 +37,16 @@ function App() {
       >
         <Route element={<AdminWidget />}>
           <Route path='/admin/dashboard' element={<AdminDashboardPage />} />
+
+          {/* BANNERS */}
           <Route path='/admin/banner/all-list/:page' element={<AdminBannerListPage />} />
+          <Route path='/admin/banner/:id' element={<AdminBannerPage />} />
+          <Route path='/admin/banner/create' element={<AdminBannerCreatePage />} />
 
           <Route
             path='*'
             element={
-              <Navigate
-                to={me?.routes ? me.routes?.[0]?.[0]?.path : '/admin/banner/dashboard'}
-                replace
-              />
+              <Navigate to={me?.routes ? me.routes?.[0]?.[0]?.path : '/admin/dashboard'} replace />
             }
           />
         </Route>
