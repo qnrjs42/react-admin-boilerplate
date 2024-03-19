@@ -141,13 +141,13 @@ const Table = <T extends IDefaultItem>({
           ))}
         </div>
       ) : null}
-      <table className='w-full min-w-[450px] table-fixed overflow-auto rounded-sm border border-[#f2f2f2] bg-white'>
-        <thead className='border-b border-[#f2f2f2] font-semibold'>
-          <tr className='text-center'>
+      <table className='w-full min-w-[450px] table-fixed overflow-auto rounded-sm border-[#f2f2f2] bg-white'>
+        <thead className='sticky top-0 border-[#f2f2f2] font-semibold'>
+          <tr className='  bg-[#fcfcfc] text-center '>
             {headers.map(header => (
-              <td key={header} className='max-w-20 break-words px-4 py-4'>
+              <th key={header} className='max-w-20 break-words px-4 py-4'>
                 {header}
-              </td>
+              </th>
             ))}
           </tr>
         </thead>
