@@ -13,7 +13,7 @@ interface IProps {
 const TableSearch: FC<IProps> = ({ total, form, onSubmit }) => {
   return (
     <Form {...form}>
-      <div className='flex items-center'>
+      <div className='flex items-center gap-3'>
         {total !== undefined ? (
           <Badge variant='secondary' className='min-w-fit'>
             총 {total}건
