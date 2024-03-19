@@ -6,7 +6,7 @@ export const ROUTE_PATHS = {
   LOGIN: '/login',
   ADMIN: {
     DASHBOARD: '/admin/dashboard',
-    BANNER: {
+    BANNERS: {
       ALL_LIST: '/admin/banner/all-list/1',
       BANNER: '/admin/banner',
       CREATE: '/admin/banner/create',
