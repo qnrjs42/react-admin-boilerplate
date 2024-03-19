@@ -20,6 +20,10 @@ interface IProps<T> {
   externalLinkItems?: string[];
   selectedItems?: T[];
   appliedItems?: T[];
+  imageItemProps?: {
+    itemKey: string;
+    className: string;
+  }[];
   renderItemProps?: {
     itemKey: string;
     children: (item: T) => JSX.Element;
@@ -36,6 +40,7 @@ const Table = <T extends IDefaultItem>({
   externalLinkItems = [],
   selectedItems = [],
   appliedItems = [],
+  imageItemProps,
   renderItemProps,
   isLoading = false,
   scrollRestorationKey,
@@ -88,10 +93,15 @@ const Table = <T extends IDefaultItem>({
         );
     }
 
-    if (imageItems.includes(showItem)) {
+    if (imageItems?.includes(showItem)) {
+      const imageItemProp = imageItemProps?.find(x => x.itemKey === showItem);
       return (
         <Td key={showItem}>
-          <img src={String(item[showItem])} className='m-auto h-14 w-14' onError={onImageError} />
+          <img
+            src={String(item[showItem])}
+            className={cn('m-auto h-14 w-14', imageItemProp?.className || '')}
+            onError={onImageError}
+          />
         </Td>
       );
     }
