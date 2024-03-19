@@ -42,22 +42,24 @@ const Table = <T extends IDefaultItem>({
   onClickItem,
 }: IProps<T>) => {
   const scrollTopRef = useRef<string>('');
+
   const { scrollData, setScrollData } = useTableStore();
 
   useLayoutEffect(() => {
     if (scrollRestorationKey) {
+      // cache에 저장된 스크롤 위치를 가져옴
       const currentScrollTop = Number(scrollData?.[scrollRestorationKey] || 0);
 
-      // number 타이핑이 아닌 경우에는 NaN이 나오므로 isNaN으로 체크
-      if (!isNaN(currentScrollTop) && items.length > 0) {
+      // 로딩이 종료된 상태일 때 스크롤 위치를 이동
+      if (!isNaN(currentScrollTop) && !isLoading) {
         scrollTopRef.current = String(currentScrollTop);
         (document.querySelector('.table-parent') as HTMLElement).scrollTop = currentScrollTop;
       }
     }
 
     return (): void => {
-      // 페이지 변경 시 현재 스크롤 위치를 sessionStorage에 저장
-      if (scrollRestorationKey && items.length > 0) {
+      // 페이지 변경 직전에 현재 스크롤 위치를 cache에 저장
+      if (scrollRestorationKey && !isLoading) {
         setScrollData({
           [scrollRestorationKey]: scrollTopRef.current,
         });
@@ -65,7 +67,7 @@ const Table = <T extends IDefaultItem>({
     };
     // disable scrollData
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [items, scrollRestorationKey, setScrollData]);
+  }, [isLoading, scrollRestorationKey, setScrollData]);
 
   const onScroll = useCallback((): void => {
     scrollTopRef.current = String(document.querySelector('.table-parent')?.scrollTop);
