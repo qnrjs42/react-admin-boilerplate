@@ -11,6 +11,7 @@ interface IProps {
 const SidebarWidgetParentMenu: FC<IProps> = ({ route, currentRoute }) => {
   return (
     <div
+      data-test-id={`sidebar-${route.menuName}`}
       className={cn(
         'mb-2 flex items-center gap-4 px-5 py-2',
         route.parentMenuName === currentRoute?.parentMenuName ? 'rounded-md bg-primary' : '',

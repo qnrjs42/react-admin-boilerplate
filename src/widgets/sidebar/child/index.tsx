@@ -12,6 +12,7 @@ interface IProps {
 const SidebarWidgetChildMenu: FC<IProps> = ({ route, currentRoute }) => {
   return (
     <div
+      data-test-id={`sidebar-${route.menuName}`}
       className={cn(
         'ml-6 cursor-pointer py-2 pl-4',
         route.path === currentRoute?.path ? 'rounded-md bg-primary' : '',
