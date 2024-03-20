@@ -96,7 +96,7 @@ const Table = <T extends IDefaultItem>({
     if (imageItems?.includes(showItem)) {
       const imageItemProp = imageItemProps?.find(x => x.itemKey === showItem);
       return (
-        <Td key={showItem}>
+        <Td data-test-id='table-image-item' key={showItem}>
           <img
             src={String(item[showItem])}
             className={cn('m-auto h-14 w-14', imageItemProp?.className || '')}
@@ -110,7 +110,7 @@ const Table = <T extends IDefaultItem>({
       const onClickLink = (e: React.MouseEvent<HTMLAnchorElement>): void => e.stopPropagation();
 
       return (
-        <Td key={showItem}>
+        <Td data-test-id='table-external-link-item' key={showItem}>
           <a
             href={String(item[showItem])}
             className='flex flex-wrap items-center justify-center gap-2 break-all text-teal-500'
@@ -125,14 +125,26 @@ const Table = <T extends IDefaultItem>({
     }
 
     if (typeof item[showItem] === 'boolean') {
-      return <Td key={showItem}>{item[showItem] ? 'Y' : 'N'}</Td>;
+      return (
+        <Td data-test-id='table-boolean-item' key={showItem}>
+          {item[showItem] ? 'Y' : 'N'}
+        </Td>
+      );
     }
 
     if (typeof item[showItem] === 'number') {
-      return <Td key={showItem}>{item[showItem].toLocaleString('ko-KR')}</Td>;
+      return (
+        <Td data-test-id='table-number-item' key={showItem}>
+          {item[showItem].toLocaleString('ko-KR')}
+        </Td>
+      );
     }
 
-    return <Td key={showItem}>{item[showItem]}</Td>;
+    return (
+      <Td data-test-id='table-text-item' key={showItem}>
+        {item[showItem]}
+      </Td>
+    );
   };
 
   return (
@@ -185,18 +197,17 @@ const Table = <T extends IDefaultItem>({
   );
 };
 
-const Td = ({
-  isStopPropagation,
-  children,
-}: {
-  isStopPropagation?: boolean;
-  children: React.ReactNode;
+const Td = (props: {
+  'isStopPropagation'?: boolean;
+  'data-test-id'?: string;
+  'children': React.ReactNode;
 }) => (
   <td
+    data-test-id={props?.['data-test-id']}
     className='max-w-20 break-words px-4 py-3 text-sm'
-    onClick={isStopPropagation ? e => e.stopPropagation() : undefined}
+    onClick={props.isStopPropagation ? e => e.stopPropagation() : undefined}
   >
-    {children}
+    {props.children}
   </td>
 );
 

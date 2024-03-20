@@ -2,9 +2,16 @@ import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 import { defineConfig } from 'vite';
 
+import CustomVitePluginReactRemoveAttributes from './plugins/remove-attrs';
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    CustomVitePluginReactRemoveAttributes({
+      attributes: ['data-test-id'],
+    }),
+  ],
   resolve: {
     alias: [
       {

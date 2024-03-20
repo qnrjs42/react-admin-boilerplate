@@ -15,7 +15,7 @@ const TableSearch: FC<IProps> = ({ total, form, onSubmit }) => {
     <Form {...form}>
       <div className='flex items-center gap-3'>
         {total !== undefined ? (
-          <Badge variant='secondary' className='min-w-fit'>
+          <Badge data-test-id='table-total' variant='secondary' className='min-w-fit'>
             총 {total}건
           </Badge>
         ) : null}
@@ -27,6 +27,7 @@ const TableSearch: FC<IProps> = ({ total, form, onSubmit }) => {
               <FormItem className='flex w-full justify-end'>
                 <FormControl>
                   <Input
+                    data-test-id='table-search'
                     type='text'
                     className='max-w-80'
                     placeholder='검색어를 입력하세요.'
@@ -36,7 +37,9 @@ const TableSearch: FC<IProps> = ({ total, form, onSubmit }) => {
               </FormItem>
             )}
           />
-          <Button type='submit'>검색</Button>
+          <Button data-test-id='table-search-submit' type='submit'>
+            검색
+          </Button>
         </form>
       </div>
     </Form>

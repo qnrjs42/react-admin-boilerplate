@@ -59,3 +59,7 @@ pnpm dev
 ```shell
 npx -p @storybook/cli sb init
 ```
+
+## cypress
+
+- msw와 호환되지 않음

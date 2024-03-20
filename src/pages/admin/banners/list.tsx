@@ -39,7 +39,7 @@ const AdminBannerListPage: FC = () => {
   };
 
   return (
-    <PageContainer className='flex h-[calc(100svh-150px)] min-h-[516px] flex-col space-y-4'>
+    <PageContainer className='flex h-[calc(100svh-150px)] min-h-[511px] flex-col space-y-4'>
       <TableSearch {...searchForm} total={paginationData.total} />
       <Table
         headers={BANNER_LIST_TABLE_HEADERS}
@@ -57,14 +57,25 @@ const AdminBannerListPage: FC = () => {
           {
             itemKey: 'isShow',
             children: item => (
-              <Button variant='secondary' onClick={onToggleShow(item)}>
+              <Button
+                data-test-id='table-toggle-show-button'
+                variant='secondary'
+                onClick={onToggleShow(item)}
+              >
                 {item.isShow ? '노출' : '중지'}
               </Button>
             ),
           },
           {
             itemKey: 'isDelete',
-            children: item => <DeleteDialog item={item} onDelete={onDelete} />,
+            children: item => (
+              <DeleteDialog
+                item={item}
+                open-button-data-test-id='table-delete-button'
+                delete-button-data-test-id='delete-button'
+                onDelete={onDelete}
+              />
+            ),
           },
         ]}
         isLoading={isLoading}
@@ -73,7 +84,9 @@ const AdminBannerListPage: FC = () => {
       />
       <TablePagination {...paginationData} />
       <div className='flex flex-1 items-end justify-end'>
-        <Button onClick={onClickCreate}>등록하기</Button>
+        <Button data-test-id='create-banner-button' onClick={onClickCreate}>
+          등록하기
+        </Button>
       </div>
     </PageContainer>
   );

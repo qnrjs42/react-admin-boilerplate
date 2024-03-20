@@ -18,3 +18,11 @@ export const bannerList = http.get<never>('/api/banner/list/:page', ({ request }
     },
   });
 });
+
+export const showBanner = http.patch<never>('/api/banner/show/:id', () => {
+  return HttpResponse.json({
+    data: {
+      ok: true,
+    },
+  });
+});
