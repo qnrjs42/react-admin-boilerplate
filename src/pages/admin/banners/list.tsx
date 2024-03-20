@@ -84,7 +84,9 @@ const AdminBannerListPage: FC = () => {
       />
       <TablePagination {...paginationData} />
       <div className='flex flex-1 items-end justify-end'>
-        <Button onClick={onClickCreate}>등록하기</Button>
+        <Button data-test-id='create-banner-button' onClick={onClickCreate}>
+          등록하기
+        </Button>
       </div>
     </PageContainer>
   );
