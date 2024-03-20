@@ -16,29 +16,38 @@ interface IDefaultItemProps {
 }
 
 interface IProps<T> {
-  item: T;
-  onDelete: (item: T) => () => void;
+  'item': T;
+  'open-button-data-test-id'?: string;
+  'delete-button-data-test-id'?: string;
+  'onDelete': (item: T) => () => void;
 }
 
-const DeleteDialog = <T extends IDefaultItemProps>({ item, onDelete }: IProps<T>) => {
+const DeleteDialog = <T extends IDefaultItemProps>(props: IProps<T>) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant='destructive'>삭제</Button>
+        <Button data-test-id={props['open-button-data-test-id']} variant='destructive'>
+          삭제
+        </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle tabIndex={0}>{item?.title?.slice?.(0, 100)}</DialogTitle>
+          <DialogTitle tabIndex={0}>{props.item?.title?.slice?.(0, 100)}</DialogTitle>
         </DialogHeader>
         <div>
-          <img src={item?.imageUrl} width={100} height={100} className='mb-4' />
+          <img src={props.item?.imageUrl} width={100} height={100} className='mb-4' />
           <span>
             삭제된 데이터는 복구할 수 없습니다. <b>삭제하시겠습니까?</b>
           </span>
         </div>
         <DialogFooter>
           <DialogClose asChild>
-            <Button variant='destructive' type='submit' onClick={onDelete(item)}>
+            <Button
+              data-test-id={props['delete-button-data-test-id']}
+              variant='destructive'
+              type='submit'
+              onClick={props.onDelete(props.item)}
+            >
               삭제
             </Button>
           </DialogClose>
