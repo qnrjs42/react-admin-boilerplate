@@ -23,4 +23,10 @@ export interface IList<T> {
   items: T[];
 }
 
+export interface ITableDefaultItem {
+  id: string;
+  rank?: number;
+  title?: string;
+}
+
 export type SearchFormDto = z.infer<typeof SearchFormDtoSchema>;
