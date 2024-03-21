@@ -28,6 +28,14 @@ export const showBanner = http.patch<never>('/api/banner/show/:id', () => {
   });
 });
 
+export const deleteBanner = http.delete<never>('/api/banner/:id', () => {
+  return HttpResponse.json({
+    data: {
+      ok: true,
+    },
+  });
+});
+
 export const rankBanner = http.patch<never>('/api/banner/rank', () => {
   return HttpResponse.json({
     data: {
