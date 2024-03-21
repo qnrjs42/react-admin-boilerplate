@@ -9,13 +9,15 @@ import type { ITableDefaultItem } from '@typings/common';
 
 interface IProps<T> {
   items: T[];
+  defaultItems: T[];
   setItems: React.Dispatch<React.SetStateAction<T[]>>;
   headerTitle?: string;
 }
 const SortableTable = <T extends ITableDefaultItem>({
-  headerTitle = '제목',
   items,
+  defaultItems,
   setItems,
+  headerTitle = '제목',
 }: IProps<T>) => {
   const [sortingItemIndex, setSortingItemIndex] = useState<number | null>(null);
 
@@ -50,6 +52,9 @@ const SortableTable = <T extends ITableDefaultItem>({
             className={cn(
               'flex items-center border-b text-center',
               sortingItemIndex === itemIndex ? 'bg-teal-800 text-white' : 'cursor-grab',
+              defaultItems.findIndex(defaultItem => defaultItem.id === item.id) !== itemIndex
+                ? 'bg-gray-100'
+                : '',
             )}
           >
             <div className='px-4 py-4'>
