@@ -35,7 +35,9 @@ const DeleteDialog = <T extends IDefaultItemProps>(props: IProps<T>) => {
           <DialogTitle tabIndex={0}>{props.item?.title?.slice?.(0, 100)}</DialogTitle>
         </DialogHeader>
         <div>
-          <img src={props.item?.imageUrl} width={100} height={100} className='mb-4' />
+          {props.item?.imageUrl ? (
+            <img src={props.item?.imageUrl} width={100} height={100} className='mb-4' />
+          ) : null}
           <span>
             삭제된 데이터는 복구할 수 없습니다. <b>삭제하시겠습니까?</b>
           </span>

@@ -3,18 +3,29 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Button } from '@shadcn-ui/ui';
 
-import useGetBannerList from '@features/banner/hooks/useGetList';
-import useListDelete from '@features/banner/hooks/useListDelete';
-import useListToggleShow from '@features/banner/hooks/useListToggleShow';
+import {
+  useGetBannerList,
+  useDeleteBannerListItem,
+  useToggleShowBannerListItem,
+  useChangeRankBannerList,
+} from '@features/banner/hooks';
 
-import { BANNER_LIST_TABLE_HEADERS, IBannerItem } from '@entities/banner';
+import { BANNER_LIST_TABLE_HEADERS, type IBannerItem } from '@entities/banner';
 
 import useChangePage from '@hooks/useChangePage';
 import useTableSearch from '@hooks/useTableSearch';
 
 import { ROUTE_PATHS } from '@constants';
 
-import { DeleteDialog, PageContainer, Table, TablePagination, TableSearch } from '@components';
+import {
+  BottomRightWrapper,
+  DeleteDialog,
+  PageContainer,
+  SortableTableDialog,
+  Table,
+  TablePagination,
+  TableSearch,
+} from '@components';
 
 const AdminBannerListPage: FC = () => {
   const navigate = useNavigate();
@@ -27,8 +38,9 @@ const AdminBannerListPage: FC = () => {
     total: data?.total,
   });
 
-  const onDelete = useListDelete();
-  const onToggleShow = useListToggleShow();
+  const onDelete = useDeleteBannerListItem();
+  const onToggleShow = useToggleShowBannerListItem();
+  const onSort = useChangeRankBannerList();
 
   const onClickItem = (item: IBannerItem) => (): void => {
     navigate(`${ROUTE_PATHS.ADMIN.BANNERS.BANNER}/${item.id}`);
@@ -39,7 +51,7 @@ const AdminBannerListPage: FC = () => {
   };
 
   return (
-    <PageContainer className='flex h-[calc(100svh-150px)] min-h-[511px] flex-col space-y-4'>
+    <PageContainer className='h-[calc(100svh-150px)] min-h-[511px] space-y-4'>
       <TableSearch {...searchForm} total={paginationData.total} />
       <Table
         headers={BANNER_LIST_TABLE_HEADERS}
@@ -70,9 +82,9 @@ const AdminBannerListPage: FC = () => {
             itemKey: 'isDelete',
             children: item => (
               <DeleteDialog
-                item={item}
                 open-button-data-test-id='table-delete-button'
                 delete-button-data-test-id='delete-button'
+                item={item}
                 onDelete={onDelete}
               />
             ),
@@ -83,11 +95,18 @@ const AdminBannerListPage: FC = () => {
         onClickItem={onClickItem}
       />
       <TablePagination {...paginationData} />
-      <div className='flex flex-1 items-end justify-end'>
+      <BottomRightWrapper className='space-x-4'>
+        <SortableTableDialog
+          open-button-data-test-id='open-sortable-table-button'
+          sort-button-data-test-id='sortable-table-sort-button'
+          dialogTitle='배너 순위 변경하기'
+          items={data?.items || []}
+          onSort={onSort}
+        />
         <Button data-test-id='create-banner-button' onClick={onClickCreate}>
           등록하기
         </Button>
-      </div>
+      </BottomRightWrapper>
     </PageContainer>
   );
 };

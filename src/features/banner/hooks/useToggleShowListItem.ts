@@ -7,9 +7,11 @@ import { apiShowBanner } from '@features/banner/apis';
 
 import { BANNER_KEYS, type IBannerItem, type IBannerList } from '@entities/banner';
 
+import { utilAxiosError } from '@utils/utilAxios';
+
 import { TOAST_DURATION } from '@constants';
 
-const useBannerListToggleShow = () => {
+const useToggleShowBannerListItem = () => {
   const params = useParams();
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -39,6 +41,13 @@ const useBannerListToggleShow = () => {
         duration: TOAST_DURATION.SUCCESS,
       });
     },
+    onError: error => {
+      toast({
+        title: '노출 처리에 실패했습니다.',
+        description: utilAxiosError(error),
+        duration: TOAST_DURATION.ERROR,
+      });
+    },
   });
 
   const onToggleShow = (item: IBannerItem) => (): void => {
@@ -48,4 +57,4 @@ const useBannerListToggleShow = () => {
   return onToggleShow;
 };
 
-export default useBannerListToggleShow;
+export default useToggleShowBannerListItem;

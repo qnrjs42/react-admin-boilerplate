@@ -7,7 +7,7 @@ interface IProps {
   children: React.ReactNode;
 }
 const PageContainer: FC<IProps> = ({ className, children }) => {
-  return <div className={cn('rounded-lg bg-white p-6', className)}>{children}</div>;
+  return <div className={cn('flex flex-col rounded-lg bg-white p-6', className)}>{children}</div>;
 };
 
 export default PageContainer;

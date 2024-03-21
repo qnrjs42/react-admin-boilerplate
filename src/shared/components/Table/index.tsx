@@ -4,13 +4,9 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { Skeleton } from '@shadcn-ui/ui';
 import { cn } from '@shadcn-ui/utils';
 
-import type { ITableItem } from '@typings/common';
+import type { ITableItem, ITableDefaultItem } from '@typings/common';
 
 import useTableStore from '@stores/table';
-
-interface IDefaultItem {
-  id: string;
-}
 
 interface IProps<T> {
   headers: readonly string[];
@@ -32,7 +28,7 @@ interface IProps<T> {
   scrollRestorationKey?: string;
   onClickItem?: (item: T) => () => void;
 }
-const Table = <T extends IDefaultItem>({
+const Table = <T extends ITableDefaultItem>({
   headers,
   items,
   showItems,
