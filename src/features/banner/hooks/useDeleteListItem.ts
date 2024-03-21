@@ -7,7 +7,7 @@ import { BANNER_KEYS, type IBannerItem, type IBannerList } from '@entities/banne
 
 import { TOAST_DURATION } from '@constants';
 
-const useListDelete = () => {
+const useDeleteBannerListItem = () => {
   const params = useParams();
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -31,4 +31,4 @@ const useListDelete = () => {
   return onDelete;
 };
 
-export default useListDelete;
+export default useDeleteBannerListItem;

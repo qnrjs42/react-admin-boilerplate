@@ -9,7 +9,7 @@ import { BANNER_KEYS, type IBannerItem, type IBannerList } from '@entities/banne
 
 import { TOAST_DURATION } from '@constants';
 
-const useBannerListToggleShow = () => {
+const useToggleShowBannerListItem = () => {
   const params = useParams();
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -48,4 +48,4 @@ const useBannerListToggleShow = () => {
   return onToggleShow;
 };
 
-export default useBannerListToggleShow;
+export default useToggleShowBannerListItem;

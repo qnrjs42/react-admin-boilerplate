@@ -3,9 +3,11 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Button } from '@shadcn-ui/ui';
 
-import useGetBannerList from '@features/banner/hooks/useGetList';
-import useListDelete from '@features/banner/hooks/useListDelete';
-import useListToggleShow from '@features/banner/hooks/useListToggleShow';
+import {
+  useGetBannerList,
+  useDeleteBannerListItem,
+  useToggleShowBannerListItem,
+} from '@features/banner/hooks';
 
 import { BANNER_LIST_TABLE_HEADERS, IBannerItem } from '@entities/banner';
 
@@ -27,8 +29,8 @@ const AdminBannerListPage: FC = () => {
     total: data?.total,
   });
 
-  const onDelete = useListDelete();
-  const onToggleShow = useListToggleShow();
+  const onDelete = useDeleteBannerListItem();
+  const onToggleShow = useToggleShowBannerListItem();
 
   const onClickItem = (item: IBannerItem) => (): void => {
     navigate(`${ROUTE_PATHS.ADMIN.BANNERS.BANNER}/${item.id}`);
