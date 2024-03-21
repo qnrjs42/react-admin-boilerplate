@@ -7,9 +7,10 @@ import {
   useGetBannerList,
   useDeleteBannerListItem,
   useToggleShowBannerListItem,
+  useChangeRankBannerList,
 } from '@features/banner/hooks';
 
-import { BANNER_LIST_TABLE_HEADERS, IBannerItem } from '@entities/banner';
+import { BANNER_LIST_TABLE_HEADERS, type IBannerItem } from '@entities/banner';
 
 import useChangePage from '@hooks/useChangePage';
 import useTableSearch from '@hooks/useTableSearch';
@@ -20,6 +21,7 @@ import {
   BottomRightWrapper,
   DeleteDialog,
   PageContainer,
+  SortableTableDialog,
   Table,
   TablePagination,
   TableSearch,
@@ -38,6 +40,7 @@ const AdminBannerListPage: FC = () => {
 
   const onDelete = useDeleteBannerListItem();
   const onToggleShow = useToggleShowBannerListItem();
+  const onSort = useChangeRankBannerList();
 
   const onClickItem = (item: IBannerItem) => (): void => {
     navigate(`${ROUTE_PATHS.ADMIN.BANNERS.BANNER}/${item.id}`);
@@ -79,9 +82,9 @@ const AdminBannerListPage: FC = () => {
             itemKey: 'isDelete',
             children: item => (
               <DeleteDialog
-                item={item}
                 open-button-data-test-id='table-delete-button'
                 delete-button-data-test-id='delete-button'
+                item={item}
                 onDelete={onDelete}
               />
             ),
@@ -92,7 +95,14 @@ const AdminBannerListPage: FC = () => {
         onClickItem={onClickItem}
       />
       <TablePagination {...paginationData} />
-      <BottomRightWrapper>
+      <BottomRightWrapper className='space-x-4'>
+        <SortableTableDialog
+          open-button-data-test-id='open-sortable-table-button'
+          sort-button-data-test-id='sortable-table-sort-button'
+          dialogTitle='배너 순위 변경하기'
+          items={data?.items || []}
+          onSort={onSort}
+        />
         <Button data-test-id='create-banner-button' onClick={onClickCreate}>
           등록하기
         </Button>

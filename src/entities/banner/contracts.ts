@@ -12,6 +12,7 @@ export const filterBannerList = (response: any): IBannerList => {
   const items = response.data.list.map((item: any) => ({
     id: item.idx,
     title: item?.title || '',
+    rank: item?.rank || 0,
     url: item?.url || '',
     imageUrl: item?.imageUrl || '',
     isShow: item?.isShow || false,
