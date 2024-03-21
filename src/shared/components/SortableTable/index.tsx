@@ -44,6 +44,7 @@ const SortableTable = <T extends ITableDefaultItem>({
         onStart={onSortStart}
         onEnd={onSortEnd}
         delay={2}
+        animation={150}
         delayOnTouchOnly
       >
         {items?.map((item, itemIndex) => (
