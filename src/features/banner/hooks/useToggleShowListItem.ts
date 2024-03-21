@@ -7,6 +7,8 @@ import { apiShowBanner } from '@features/banner/apis';
 
 import { BANNER_KEYS, type IBannerItem, type IBannerList } from '@entities/banner';
 
+import { utilAxiosError } from '@utils/utilAxios';
+
 import { TOAST_DURATION } from '@constants';
 
 const useToggleShowBannerListItem = () => {
@@ -37,6 +39,13 @@ const useToggleShowBannerListItem = () => {
       toast({
         title: `${item.isShow ? '노출 중지' : '노출'} 처리되었습니다.`,
         duration: TOAST_DURATION.SUCCESS,
+      });
+    },
+    onError: error => {
+      toast({
+        title: '노출 처리에 실패했습니다.',
+        description: utilAxiosError(error),
+        duration: TOAST_DURATION.ERROR,
       });
     },
   });
