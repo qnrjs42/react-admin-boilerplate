@@ -16,7 +16,14 @@ import useTableSearch from '@hooks/useTableSearch';
 
 import { ROUTE_PATHS } from '@constants';
 
-import { DeleteDialog, PageContainer, Table, TablePagination, TableSearch } from '@components';
+import {
+  BottomRightWrapper,
+  DeleteDialog,
+  PageContainer,
+  Table,
+  TablePagination,
+  TableSearch,
+} from '@components';
 
 const AdminBannerListPage: FC = () => {
   const navigate = useNavigate();
@@ -41,7 +48,7 @@ const AdminBannerListPage: FC = () => {
   };
 
   return (
-    <PageContainer className='flex h-[calc(100svh-150px)] min-h-[511px] flex-col space-y-4'>
+    <PageContainer className='h-[calc(100svh-150px)] min-h-[511px] space-y-4'>
       <TableSearch {...searchForm} total={paginationData.total} />
       <Table
         headers={BANNER_LIST_TABLE_HEADERS}
@@ -85,11 +92,11 @@ const AdminBannerListPage: FC = () => {
         onClickItem={onClickItem}
       />
       <TablePagination {...paginationData} />
-      <div className='flex flex-1 items-end justify-end'>
+      <BottomRightWrapper>
         <Button data-test-id='create-banner-button' onClick={onClickCreate}>
           등록하기
         </Button>
-      </div>
+      </BottomRightWrapper>
     </PageContainer>
   );
 };
