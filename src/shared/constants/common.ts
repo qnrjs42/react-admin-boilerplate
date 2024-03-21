@@ -28,3 +28,7 @@ export const TOAST_DURATION = {
   WARNING: 3000,
   ERROR: 3000,
 } as const;
+
+export const DIALOG_DURATION = {
+  CLOSE: 500,
+} as const;
