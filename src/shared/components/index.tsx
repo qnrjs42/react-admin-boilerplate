@@ -5,6 +5,7 @@ import SharedImageFormFieldRender from './ImageFormFieldRender';
 import PageContainer from './PageContainer';
 import SortableTable from './SortableTable';
 import SortableTableDialog from './SortableTableDialog';
+import SharedSwitchFormFieldRender from './SwitchFormFieldRender';
 import Table from './Table';
 import TablePagination from './TablePagination';
 import TableSearch from './TableSearch';
@@ -20,4 +21,5 @@ export {
   SortableTableDialog,
   SharedFormFieldRender,
   SharedImageFormFieldRender,
+  SharedSwitchFormFieldRender,
 };
