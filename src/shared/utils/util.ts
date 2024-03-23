@@ -1,3 +1,5 @@
+import type { FileWithDropzone } from '@typings/common';
+
 export const utilTimeSleep = (sec: number): Promise<void> => {
   return new Promise(resolve => {
     setTimeout(() => {
@@ -79,4 +81,17 @@ export const utilPaginate = (
     endIndex,
     pages,
   };
+};
+
+export const utilRemoteImageUrlToFiles = (imageUrl: string): FileWithDropzone[] => {
+  const file: FileWithDropzone = {
+    ...new File([''], '', { type: 'file', lastModified: Date.now() }),
+    preview: imageUrl,
+    name: `${imageUrl}_${Date.now()}`,
+    size: 0,
+    type: 'image/jpg',
+    isRemote: true,
+  };
+
+  return [file];
 };
