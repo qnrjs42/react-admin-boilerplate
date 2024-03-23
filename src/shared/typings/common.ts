@@ -30,3 +30,5 @@ export interface ITableDefaultItem {
 }
 
 export type SearchFormDto = z.infer<typeof SearchFormDtoSchema>;
+
+export type FileWithDropzone = File & { preview: string; isRemote?: boolean };

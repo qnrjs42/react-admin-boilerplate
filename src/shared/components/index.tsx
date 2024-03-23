@@ -1,6 +1,7 @@
 import BottomRightWrapper from './BottomRightWrapper';
 import DeleteDialog from './DeleteDialog';
 import SharedFormFieldRender from './FormFieldRender';
+import SharedImageFormFieldRender from './ImageFormFieldRender';
 import PageContainer from './PageContainer';
 import SortableTable from './SortableTable';
 import SortableTableDialog from './SortableTableDialog';
@@ -18,4 +19,5 @@ export {
   SortableTable,
   SortableTableDialog,
   SharedFormFieldRender,
+  SharedImageFormFieldRender,
 };
