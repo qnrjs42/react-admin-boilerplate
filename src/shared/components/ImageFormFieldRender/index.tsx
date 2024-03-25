@@ -67,7 +67,7 @@ const SharedImageFormFieldRender = <TName extends string>({
             className: 'bg-[#fafafa] rounded-md border border-dashed cursor-pointer px-3 py-9 mt-2',
           })}
         >
-          <input {...getInputProps()} />
+          <input data-test-id='upload-image' {...getInputProps()} />
           <div className='flex flex-col items-center justify-center gap-1'>
             <FaRegImage color='rgb(156,163,175)' size={18} />
             <p className=' text-center text-sm text-gray-400'>

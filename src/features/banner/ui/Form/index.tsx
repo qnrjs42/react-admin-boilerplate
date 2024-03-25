@@ -48,7 +48,9 @@ const BannerForm: FC<IProps> = ({ bannerId, form, files, setFiles, submitProps, 
           <FormField
             name='isShow'
             control={form.control}
-            render={({ field }) => <SharedSwitchFormFieldRender label='배너 노출' field={field} />}
+            render={({ field }) => (
+              <SharedSwitchFormFieldRender data-test-id='aaaaa' label='배너 노출' field={field} />
+            )}
           />
           <FormField
             name='title'

@@ -1,10 +1,10 @@
 import { cyLogin } from '../../support/commands';
 
-describe('로그인', () => {
+describe('배너 리스트', () => {
   beforeEach(() => {
     cyLogin();
 
-    cy.visit('/admin/banners/all-list/1');
+    cy.visit('/admin/banner/all-list/1');
   });
 
   it('sidebar widget active', () => {

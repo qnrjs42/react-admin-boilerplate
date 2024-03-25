@@ -25,6 +25,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
+import 'cypress-file-upload';
 
 export const cyLogin = (email = 'admin@admin.com', password = 'asdqwe123') => {
   cy.session([email, password], () => {

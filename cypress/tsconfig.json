@@ -4,7 +4,7 @@
     "jsx": "preserve",
     "lib": ["es5", "dom"],
     "esModuleInterop": true,
-    "types": ["cypress", "node"]
+    "types": ["cypress", "node", "cypress-file-upload"]
   },
   "include": ["**/*.ts", "**/*.tsx"]
 }
