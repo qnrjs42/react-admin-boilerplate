@@ -1,5 +1,7 @@
 import BottomRightWrapper from './BottomRightWrapper';
 import DeleteDialog from './DeleteDialog';
+import DetailPageError from './DetailPageError';
+import DetailPageLoading from './DetailPageLoading';
 import SharedFormFieldRender from './FormFieldRender';
 import SharedImageFormFieldRender from './ImageFormFieldRender';
 import PageContainer from './PageContainer';
@@ -13,7 +15,9 @@ import TableSearch from './TableSearch';
 export {
   TableSearch,
   PageContainer,
+  DetailPageError,
   TablePagination,
+  DetailPageLoading,
   BottomRightWrapper,
   Table,
   DeleteDialog,
