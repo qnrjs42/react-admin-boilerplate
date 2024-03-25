@@ -5,7 +5,12 @@ import { useToast } from '@shadcn-ui/hooks';
 
 import { apiDeleteBanner } from '@features/banner/apis';
 
-import { BANNER_KEYS, type IBannerItem, type IBannerList } from '@entities/banner';
+import {
+  BANNER_KEYS,
+  BANNER_TOAST_MESSAGES,
+  type IBannerItem,
+  type IBannerList,
+} from '@entities/banner';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
@@ -19,24 +24,24 @@ const useDeleteBannerListItem = () => {
   const { mutate: deleteBanner } = useMutation({
     mutationKey: [BANNER_KEYS.DELETE],
     mutationFn: apiDeleteBanner,
-    onSuccess: (item: IBannerItem) => {
+    onSuccess: (bannerId: string) => {
       queryClient.setQueryData<IBannerList>([BANNER_KEYS.GET_LIST, params?.page], prev => {
         return prev
           ? {
               ...prev,
-              items: prev.items.filter(prevItem => prevItem.id !== item.id),
+              items: prev.items.filter(prevItem => prevItem.id !== bannerId),
             }
           : prev;
       });
 
       toast({
-        title: `${item.title} 삭제되었습니다.`,
+        title: BANNER_TOAST_MESSAGES.DELETE_SUCCESS,
         duration: TOAST_DURATION.SUCCESS,
       });
     },
     onError: error => {
       toast({
-        title: '삭제 처리에 실패했습니다.',
+        title: BANNER_TOAST_MESSAGES.DELETE_ERROR,
         description: utilAxiosError(error),
         duration: TOAST_DURATION.ERROR,
       });
@@ -44,7 +49,7 @@ const useDeleteBannerListItem = () => {
   });
 
   const onDelete = (item: IBannerItem) => (): void => {
-    deleteBanner(item);
+    deleteBanner(item.id);
   };
 
   return onDelete;

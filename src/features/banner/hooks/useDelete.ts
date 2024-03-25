@@ -5,7 +5,7 @@ import { useToast } from '@shadcn-ui/hooks';
 
 import { apiDeleteBanner } from '@features/banner/apis';
 
-import { BANNER_KEYS, type IBanner } from '@entities/banner';
+import { BANNER_TOAST_MESSAGES, BANNER_KEYS, type IBanner } from '@entities/banner';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
@@ -28,7 +28,7 @@ const useDeleteBanner = (banner?: IBanner) => {
       });
 
       toast({
-        title: `배너가 삭제되었습니다.`,
+        title: BANNER_TOAST_MESSAGES.DELETE_SUCCESS,
         duration: TOAST_DURATION.SUCCESS,
       });
 
@@ -36,7 +36,7 @@ const useDeleteBanner = (banner?: IBanner) => {
     },
     onError: error => {
       toast({
-        title: '배너 삭제 처리에 실패했습니다.',
+        title: BANNER_TOAST_MESSAGES.DELETE_ERROR,
         description: utilAxiosError(error),
         duration: TOAST_DURATION.ERROR,
       });

@@ -12,6 +12,7 @@ import {
   BANNER_KEYS,
   type BannerFormDto,
   type IBanner,
+  BANNER_TOAST_MESSAGES,
 } from '@entities/banner';
 
 import useImageFiles from '@hooks/useImageFiles';
@@ -51,7 +52,7 @@ const useModifyBannerForm = (banner?: IBanner) => {
       ]);
 
       toast({
-        title: '배너 수정이 완료되었습니다.',
+        title: BANNER_TOAST_MESSAGES.MODIFY_SUCCESS,
         duration: TOAST_DURATION.SUCCESS,
       });
 
@@ -60,7 +61,7 @@ const useModifyBannerForm = (banner?: IBanner) => {
     onError: error => {
       toast({
         variant: 'destructive',
-        title: '배너 수정에 실패했습니다.',
+        title: BANNER_TOAST_MESSAGES.MODIFY_ERROR,
         description: utilAxiosError(error),
         duration: TOAST_DURATION.ERROR,
       });

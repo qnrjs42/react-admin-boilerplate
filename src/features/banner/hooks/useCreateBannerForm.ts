@@ -7,7 +7,12 @@ import { useToast } from '@shadcn-ui/hooks';
 
 import { apiCreateBanner } from '@features/banner/apis';
 
-import { BannerFormDtoSchema, BANNER_KEYS, type BannerFormDto } from '@entities/banner';
+import {
+  BannerFormDtoSchema,
+  BANNER_KEYS,
+  type BannerFormDto,
+  BANNER_TOAST_MESSAGES,
+} from '@entities/banner';
 
 import useImageFiles from '@hooks/useImageFiles';
 
@@ -40,7 +45,7 @@ const useCreateBannerForm = () => {
         queryKey: [BANNER_KEYS.GET_LIST],
       }),
         toast({
-          title: '배너 생성이 완료되었습니다.',
+          title: BANNER_TOAST_MESSAGES.CREATE_SUCCESS,
           duration: TOAST_DURATION.SUCCESS,
         });
 
@@ -49,7 +54,7 @@ const useCreateBannerForm = () => {
     onError: error => {
       toast({
         variant: 'destructive',
-        title: '배너 생성에 실패했습니다.',
+        title: BANNER_TOAST_MESSAGES.CREATE_ERROR,
         description: utilAxiosError(error),
         duration: TOAST_DURATION.ERROR,
       });
