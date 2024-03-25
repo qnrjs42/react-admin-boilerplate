@@ -1,7 +1,7 @@
 import type { UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
 
-import type { IList } from '@typings/common';
+import type { FileWithDropzone, IList } from '@typings/common';
 
 import { BannerFormDtoSchema } from './contracts';
 
@@ -11,10 +11,11 @@ export interface IBanner {
   rank: number;
   url: string;
   imageUrl: string;
+  imageFiles: FileWithDropzone[];
   isShow: boolean;
 }
 
-export interface IBannerItem extends IBanner {
+export interface IBannerItem extends Omit<IBanner, 'imageFiles'> {
   isDelete: boolean;
 }
 

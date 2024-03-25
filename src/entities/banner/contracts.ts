@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { utilRemoteImageUrlToFiles } from '@utils/util';
+
 import type { BannerFormKeys, IBanner, IBannerList } from './types';
 
 export const BANNER_LIST_TABLE_HEADERS = [
@@ -34,6 +36,7 @@ export const filterBanner = (response: any): IBanner => {
     title: response.data?.title || '',
     rank: response.data?.rank || 0,
     imageUrl: response.data?.imageUrl || '',
+    imageFiles: response?.data?.imageUrl ? utilRemoteImageUrlToFiles(response.data.imageUrl) : [],
     url: response.data?.url || '',
     isShow: response.data?.isShow || false,
   };

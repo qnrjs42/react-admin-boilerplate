@@ -6,9 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useToast } from '@shadcn-ui/hooks';
 
 import { apiModifyBanner } from '@features/banner/apis';
-import { useGetBanner } from '@features/banner/hooks';
 
-import { type BannerFormDto, BannerFormDtoSchema, BANNER_KEYS } from '@entities/banner';
+import { type BannerFormDto, BannerFormDtoSchema, BANNER_KEYS, IBanner } from '@entities/banner';
 
 import useImageFiles from '@hooks/useImageFiles';
 
@@ -16,24 +15,21 @@ import { utilAxiosError } from '@utils/utilAxios';
 
 import { TOAST_DURATION } from '@constants';
 
-const useBannerForm = () => {
+const useModifyBannerForm = (banner?: IBanner) => {
   const { toast } = useToast();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
+  const { files, setFiles } = useImageFiles(banner?.imageFiles || []);
+
   const form = useForm<BannerFormDto>({
     resolver: zodResolver(BannerFormDtoSchema),
     defaultValues: {
-      title: '11',
-      url: '',
-      isShow: false,
+      title: banner?.title || '',
+      url: banner?.url || '',
+      imageFiles: banner?.imageFiles || [],
+      isShow: banner?.isShow || false,
     },
-  });
-
-  const { files, setFiles } = useImageFiles();
-  const { banner, isError: isGetError } = useGetBanner({
-    form,
-    setFiles,
   });
 
   const { mutate: modifyBanner } = useMutation({
@@ -68,8 +64,6 @@ const useBannerForm = () => {
   });
 
   const onSubmit = form.handleSubmit((data: BannerFormDto): void => {
-    if (isGetError) return;
-
     modifyBanner({
       id: banner?.id,
       imageFiles: files,
@@ -80,4 +74,4 @@ const useBannerForm = () => {
   return { form, files, setFiles, onSubmit };
 };
 
-export default useBannerForm;
+export default useModifyBannerForm;
