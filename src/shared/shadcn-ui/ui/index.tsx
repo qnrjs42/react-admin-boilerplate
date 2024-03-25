@@ -63,3 +63,5 @@ export {
   DialogDescription,
 } from './dialog';
 export { Badge, badgeVariants } from './badge';
+export { Switch } from './switch';
+export { Alert, AlertTitle, AlertDescription } from './alert';

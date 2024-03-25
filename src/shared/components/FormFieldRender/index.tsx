@@ -2,17 +2,28 @@ import type { ControllerRenderProps } from 'react-hook-form';
 
 import { Input, FormControl, FormItem, FormLabel, FormMessage } from '@shadcn-ui/ui';
 
-interface IProps<TName extends string> {
+interface IProps<TName extends string> extends React.InputHTMLAttributes<HTMLInputElement> {
   type: React.InputHTMLAttributes<HTMLInputElement>['type'];
   field: ControllerRenderProps<any, TName>;
   label?: string;
+  isRequired?: boolean;
 }
-const SharedFormFieldRender = <TName extends string>(props: IProps<TName>) => {
+const SharedFormFieldRender = <TName extends string>({
+  type,
+  field,
+  label,
+  isRequired,
+  ...restProps
+}: IProps<TName>) => {
   return (
     <FormItem>
-      {props.label ? <FormLabel>{props.label}</FormLabel> : null}
+      {label ? (
+        <FormLabel>
+          {label} {isRequired ? <strong className='required'>*</strong> : ''}
+        </FormLabel>
+      ) : null}
       <FormControl>
-        <Input type={props.type} {...props.field} />
+        <Input type={type} {...field} {...restProps} />
       </FormControl>
       <FormMessage />
     </FormItem>

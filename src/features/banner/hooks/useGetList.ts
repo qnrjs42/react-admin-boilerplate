@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
 
-import { BANNER_KEYS, type IBannerList } from '@entities/banner';
+import { apiGetBannerList } from '@features/banner/apis';
 
-import apiGetBannerList from '../apis/getList';
+import { BANNER_KEYS, type IBannerList } from '@entities/banner';
 
 interface IReturn {
   data?: IBannerList;
