@@ -91,5 +91,25 @@ export const modifyBanner = http.patch<never>('/api/banner/modify/:id', async ({
     banners[foundIndex] = banner.data;
   }
 
-  return HttpResponse.json(banner);
+  return HttpResponse.json({
+    data: {
+      ok: true,
+    },
+  });
+});
+
+export const createBanner = http.post<never>('/api/banner/create', async ({ request }) => {
+  const createBanner: any = await request.json();
+
+  banners.push({
+    ...createBanner,
+    idx: `auahsdkjasnbd${banners.length + 1}`,
+    imageUrl: 'https://via.placeholder.com/300',
+  });
+
+  return HttpResponse.json({
+    data: {
+      ok: true,
+    },
+  });
 });

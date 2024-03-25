@@ -1,4 +1,5 @@
 import apiChangeRankBannerList from './changeRankList';
+import apiCreateBanner from './create';
 import apiDeleteBanner from './delete';
 import apiGetBanner from './getBanner';
 import apiGetBannerList from './getList';
@@ -12,4 +13,5 @@ export {
   apiDeleteBanner,
   apiGetBanner,
   apiModifyBanner,
+  apiCreateBanner,
 };

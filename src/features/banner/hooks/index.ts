@@ -1,4 +1,5 @@
 import useChangeRankBannerList from './useChangeRankList';
+import useCreateBannerForm from './useCreateBannerForm';
 import useDeleteBanner from './useDelete';
 import useDeleteBannerListItem from './useDeleteListItem';
 import useGetBanner from './useGetBanner';
@@ -11,6 +12,7 @@ export {
   useDeleteBanner,
   useGetBannerList,
   useModifyBannerForm,
+  useCreateBannerForm,
   useChangeRankBannerList,
   useDeleteBannerListItem,
   useToggleShowBannerListItem,

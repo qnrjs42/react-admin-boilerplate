@@ -3,6 +3,7 @@ import type { RequestHandler } from 'msw';
 import { authLoginEmail, authLogout, authMenu, authUser } from './apis/auth';
 import {
   bannerList,
+  createBanner,
   deleteBanner,
   detailBanner,
   modifyBanner,
@@ -19,6 +20,7 @@ const bannerHandlers = [
   rankBanner,
   detailBanner,
   modifyBanner,
+  createBanner,
 ];
 const uploadHandlers = [uploadImage];
 
