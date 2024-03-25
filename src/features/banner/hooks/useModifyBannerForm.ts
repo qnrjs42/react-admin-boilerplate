@@ -7,7 +7,12 @@ import { useToast } from '@shadcn-ui/hooks';
 
 import { apiModifyBanner } from '@features/banner/apis';
 
-import { type BannerFormDto, BannerFormDtoSchema, BANNER_KEYS, IBanner } from '@entities/banner';
+import {
+  BannerFormDtoSchema,
+  BANNER_KEYS,
+  type BannerFormDto,
+  type IBanner,
+} from '@entities/banner';
 
 import useImageFiles from '@hooks/useImageFiles';
 
@@ -42,7 +47,6 @@ const useModifyBannerForm = (banner?: IBanner) => {
         }),
         queryClient.invalidateQueries({
           queryKey: [BANNER_KEYS.GET, bannerId],
-          stale: false, // https://tanstack.com/query/v5/docs/framework/react/guides/filters#query-filters
         }),
       ]);
 

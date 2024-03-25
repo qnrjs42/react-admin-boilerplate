@@ -14,12 +14,12 @@ interface IReturn {
 const useGetBanner = (): IReturn => {
   const params = useParams();
 
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, isFetching, isError } = useQuery({
     queryKey: [BANNER_KEYS.GET, params?.id],
     queryFn: () => apiGetBanner({ id: params?.id }),
   });
 
-  return { banner: data, isLoading, isError };
+  return { banner: data, isLoading: isLoading || isFetching, isError };
 };
 
 export default useGetBanner;
