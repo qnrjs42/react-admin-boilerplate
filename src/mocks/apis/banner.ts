@@ -9,7 +9,11 @@ const banners = Array.from({ length: 30 }).map((_, idx) => ({
   isShow: idx % 2 === 0,
 }));
 
-export const bannerList = http.get<never>('/api/banner/list/:page', ({ request }) => {
+type BannerParams = {
+  id: string;
+};
+
+export const bannerList = http.get<never>('/api/banner/list/:page', () => {
   return HttpResponse.json({
     data: {
       page: 1,
@@ -28,7 +32,12 @@ export const showBanner = http.patch<never>('/api/banner/show/:id', () => {
   });
 });
 
-export const deleteBanner = http.delete<never>('/api/banner/:id', () => {
+export const deleteBanner = http.delete<BannerParams>('/api/banner/:id', async req => {
+  const { id } = req.params;
+
+  const foundIndex = banners.findIndex(b => b.idx === id);
+  if (foundIndex !== -1) banners.splice(foundIndex, 1);
+
   return HttpResponse.json({
     data: {
       ok: true,
@@ -55,9 +64,6 @@ const banner: any = {
   },
 };
 
-type DetailBannerParams = {
-  id: string;
-};
 type DetailBannerBody = {
   id: string;
   title: string;
@@ -66,14 +72,11 @@ type DetailBannerBody = {
   url: string;
   isShow: boolean;
 };
-export const detailBanner = http.get<DetailBannerParams, DetailBannerBody>(
-  '/api/banner/:id',
-  req => {
-    banner.data.idx = req.params.id;
+export const detailBanner = http.get<BannerParams, DetailBannerBody>('/api/banner/:id', req => {
+  banner.data.idx = req.params.id;
 
-    return HttpResponse.json(banner);
-  },
-);
+  return HttpResponse.json(banner);
+});
 
 export const modifyBanner = http.patch<never>('/api/banner/modify/:id', async ({ request }) => {
   const modifyBanner: any = await request.json();

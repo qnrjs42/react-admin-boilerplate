@@ -8,12 +8,14 @@ import type { BannerFormDto } from '@entities/banner';
 import type { FileWithDropzone } from '@typings/common';
 
 import {
+  DeleteDialog,
   SharedFormFieldRender,
   SharedImageFormFieldRender,
   SharedSwitchFormFieldRender,
 } from '@components';
 
 interface IProps {
+  bannerId?: string;
   form: UseFormReturn<BannerFormDto>;
   files: FileWithDropzone[];
   setFiles: React.Dispatch<React.SetStateAction<FileWithDropzone[]>>;
@@ -21,12 +23,23 @@ interface IProps {
     label: string;
     onSubmit: (e?: React.BaseSyntheticEvent<object, any, any> | undefined) => Promise<void>;
   };
+  onDelete?: () => () => void;
 }
-const BannerForm: FC<IProps> = ({ form, files, setFiles, submitProps }) => {
+const BannerForm: FC<IProps> = ({ bannerId, form, files, setFiles, submitProps, onDelete }) => {
   return (
     <Form {...form}>
       <form>
-        <div className='flex justify-end'>
+        <div className='flex justify-end gap-4'>
+          {onDelete ? (
+            <DeleteDialog
+              item={{
+                id: bannerId || '',
+                title: form.getValues('title'),
+                imageUrl: form.getValues('imageFiles')[0]?.preview,
+              }}
+              onDelete={onDelete}
+            />
+          ) : null}
           <Button type='button' onClick={submitProps.onSubmit}>
             {submitProps.label}
           </Button>

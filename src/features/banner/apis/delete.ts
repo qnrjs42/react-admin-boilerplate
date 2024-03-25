@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-import type { IBannerItem } from '@entities/banner';
+const apiDeleteBanner = async (bannerId?: string): Promise<string> => {
+  if (!bannerId) throw new Error('존재하지 않는 배너입니다.');
 
-const apiDeleteBanner = async (item: IBannerItem): Promise<IBannerItem> => {
-  await axios.delete(`/api/banner/${item.id}`);
+  await axios.delete(`/api/banner/${bannerId}`);
 
-  return item;
+  return bannerId;
 };
 
 export default apiDeleteBanner;

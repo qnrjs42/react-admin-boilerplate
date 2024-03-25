@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { DetailWidget } from '@widgets/index';
 
-import { useGetBanner, useModifyBannerForm } from '@features/banner/hooks';
+import { useDeleteBanner, useGetBanner, useModifyBannerForm } from '@features/banner/hooks';
 import { BannerForm } from '@features/banner/ui';
 
 import type { IBanner } from '@entities/banner';
@@ -22,16 +22,19 @@ interface IProps {
 }
 const AdminBannerDetail: FC<IProps> = ({ banner }) => {
   const { form, files, setFiles, onSubmit } = useModifyBannerForm(banner);
+  const onDelete = useDeleteBanner(banner);
 
   return (
     <BannerForm
+      bannerId={banner?.id}
       form={form}
       files={files}
       setFiles={setFiles}
       submitProps={{
-        label: '수정하기',
+        label: '수정',
         onSubmit,
       }}
+      onDelete={onDelete}
     />
   );
 };
