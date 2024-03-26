@@ -44,15 +44,15 @@ export default defineConfig({
       },
       {
         find: '@hooks',
-        replacement: path.resolve(__dirname, 'src/shared/hooks/index.ts'),
+        replacement: path.resolve(__dirname, 'src/shared/hooks'),
       },
       {
         find: '@typings',
         replacement: path.resolve(__dirname, 'src/shared/typings/index.ts'),
       },
       {
-        find: '@constants',
-        replacement: path.resolve(__dirname, 'src/shared/constants'),
+        find: '@consts',
+        replacement: path.resolve(__dirname, 'src/shared/consts'),
       },
       {
         find: '@contracts',

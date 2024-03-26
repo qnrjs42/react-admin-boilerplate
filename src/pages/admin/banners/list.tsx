@@ -11,7 +11,8 @@ import useToggleShowBannerListItem from '@features/banner/hooks/useToggleShowLis
 import { BANNER_LIST_TABLE_HEADERS } from '@entities/banner/consts';
 import { IBannerItem } from '@entities/banner/types';
 
-import { useChangePage, useTableSearch } from '@hooks';
+import useChangePage from '@hooks/useChangePage';
+import useTableSearch from '@hooks/useTableSearch';
 
 import BottomRightWrapper from '@components/BottomRightWrapper';
 import DeleteDialog from '@components/DeleteDialog';

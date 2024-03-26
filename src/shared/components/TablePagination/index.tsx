@@ -10,7 +10,7 @@ import {
   PaginationPrevious,
 } from '@shadcn-ui/ui';
 
-import { usePagination } from '@hooks';
+import usePagination from '@hooks/usePagination';
 
 interface IProps {
   total: number;
