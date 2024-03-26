@@ -12,6 +12,19 @@ export default defineConfig({
       attributes: ['data-test-id'],
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'axios': ['axios'],
+          'sortablejs': ['sortablejs'],
+          'react-sortablejs': ['react-sortablejs'],
+          'react-dropzone': ['react-dropzone'],
+          'tailwind-merge': ['tailwind-merge'],
+        },
+      },
+    },
+  },
   resolve: {
     alias: [
       {
