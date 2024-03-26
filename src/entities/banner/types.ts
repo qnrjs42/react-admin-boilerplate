@@ -1,7 +1,7 @@
 import type { UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
 
-import type { FileWithDropzone, IList } from '@typings';
+import type { FileWithDropzone, IList } from '@typings/common';
 
 import { BannerFormDtoSchema } from './contracts';
 

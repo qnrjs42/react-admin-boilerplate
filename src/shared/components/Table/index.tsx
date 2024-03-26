@@ -4,7 +4,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { Skeleton } from '@shadcn-ui/ui';
 import { cn } from '@shadcn-ui/utils';
 
-import type { ITableItem, ITableDefaultItem } from '@typings';
+import type { ITableItem, ITableDefaultItem } from '@typings/common';
 
 import useTableStore from '@stores/table';
 

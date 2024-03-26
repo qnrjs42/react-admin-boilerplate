@@ -5,7 +5,7 @@ import { Button, Form, FormField } from '@shadcn-ui/ui';
 
 import type { BannerFormDto } from '@entities/banner/types';
 
-import type { FileWithDropzone } from '@typings';
+import type { FileWithDropzone } from '@typings/common';
 
 import DeleteDialog from '@components/DeleteDialog';
 import SharedFormFieldRender from '@components/FormFieldRender';

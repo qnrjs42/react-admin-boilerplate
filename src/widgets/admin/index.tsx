@@ -3,7 +3,7 @@ import { useLocation, useParams } from 'react-router-dom';
 
 import { HeaderWidget, RightWidget, SidebarWidget, MainWidget, ContentWidget } from '@widgets/.';
 
-import type { IMenuRoute } from '@typings';
+import type { IMenuRoute } from '@typings/common';
 
 import { LIST_REGEXP } from '@src/shared/consts/regexp';
 import { NESTED_ROUTES } from '@src/shared/consts/routes';

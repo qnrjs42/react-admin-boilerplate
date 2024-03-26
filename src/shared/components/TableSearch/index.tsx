@@ -3,7 +3,7 @@ import type { UseFormReturn } from 'react-hook-form';
 
 import { Badge, Button, Form, FormControl, FormField, FormItem, Input } from '@shadcn-ui/ui';
 
-import type { SearchFormDto } from '@typings';
+import type { SearchFormDto } from '@typings/common';
 
 interface IProps {
   total?: number;

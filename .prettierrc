@@ -18,7 +18,7 @@
     "^@entities/(.*)$",
     "^@hooks/(.*)$",
     "^@utils/(.*)$",
-    "^@typings$",
+    "^@typings/(.*)$",
     "^@stores/(.*)$",
     "^@consts/(.*)$",
     "^@contracts/(.*)$",

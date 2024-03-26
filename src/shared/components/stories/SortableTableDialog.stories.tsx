@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import type { ITableDefaultItem } from '@typings';
+import type { ITableDefaultItem } from '@typings/common';
 
 import SortableTableDialog from '@components/SortableTableDialog';
 

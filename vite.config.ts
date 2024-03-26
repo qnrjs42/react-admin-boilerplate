@@ -48,7 +48,7 @@ export default defineConfig({
       },
       {
         find: '@typings',
-        replacement: path.resolve(__dirname, 'src/shared/typings/index.ts'),
+        replacement: path.resolve(__dirname, 'src/shared/typings'),
       },
       {
         find: '@consts',
