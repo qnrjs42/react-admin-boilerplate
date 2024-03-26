@@ -3,9 +3,9 @@ import { useForm } from 'react-hook-form';
 
 import { Form, FormField } from '@shadcn-ui/ui';
 
-import { INPUT_TYPE_ATTRIBUTES } from '@constants';
+import SharedFormFieldRender from '@components/FormFieldRender';
 
-import { SharedFormFieldRender } from '..';
+import { INPUT_TYPE_ATTRIBUTES } from '@src/shared/consts/common';
 
 type Story = StoryObj<typeof SharedFormFieldRender>;
 

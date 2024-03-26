@@ -5,14 +5,12 @@ import { Button, Form, FormField } from '@shadcn-ui/ui';
 
 import type { BannerFormDto } from '@entities/banner/types';
 
-import type { FileWithDropzone } from '@typings';
+import type { FileWithDropzone } from '@typings/common';
 
-import {
-  DeleteDialog,
-  SharedFormFieldRender,
-  SharedImageFormFieldRender,
-  SharedSwitchFormFieldRender,
-} from '@components';
+import DeleteDialog from '@components/DeleteDialog';
+import SharedFormFieldRender from '@components/FormFieldRender';
+import SharedImageFormFieldRender from '@components/ImageFormFieldRender';
+import SharedSwitchFormFieldRender from '@components/SwitchFormFieldRender';
 
 interface IProps {
   bannerId?: string;

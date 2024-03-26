@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
 
-import { apiGetBanner } from '@features/banner/apis';
+import apiGetBanner from '@features/banner/apis/getBanner';
 
 import { BANNER_KEYS } from '@entities/banner/consts';
 import type { IBanner } from '@entities/banner/types';

@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 import { Separator } from '@shadcn-ui/ui';
 import { cn } from '@shadcn-ui/utils';
 
-import type { IMenuRoute } from '@typings';
+import type { IMenuRoute } from '@typings/common';
 
-import { useSidebarStore } from '@stores';
+import useSidebarStore from '@stores/sidebar';
 
 import SidebarWidgetChildMenu from './child';
 import SidebarInOut from './inout';

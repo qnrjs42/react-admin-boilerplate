@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import { Form, FormField } from '@shadcn-ui/ui';
 
-import { SharedSwitchFormFieldRender } from '..';
+import SharedSwitchFormFieldRender from '@components/SwitchFormFieldRender';
 
 type Story = StoryObj<typeof SharedSwitchFormFieldRender>;
 

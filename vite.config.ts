@@ -12,6 +12,19 @@ export default defineConfig({
       attributes: ['data-test-id'],
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'axios': ['axios'],
+          'sortablejs': ['sortablejs'],
+          'react-sortablejs': ['react-sortablejs'],
+          'react-dropzone': ['react-dropzone'],
+          'tailwind-merge': ['tailwind-merge'],
+        },
+      },
+    },
+  },
   resolve: {
     alias: [
       {
@@ -40,27 +53,27 @@ export default defineConfig({
       },
       {
         find: '@stores',
-        replacement: path.resolve(__dirname, 'src/shared/stores/index.ts'),
+        replacement: path.resolve(__dirname, 'src/shared/stores'),
       },
       {
         find: '@hooks',
-        replacement: path.resolve(__dirname, 'src/shared/hooks/index.ts'),
+        replacement: path.resolve(__dirname, 'src/shared/hooks'),
       },
       {
         find: '@typings',
-        replacement: path.resolve(__dirname, 'src/shared/typings/index.ts'),
+        replacement: path.resolve(__dirname, 'src/shared/typings'),
       },
       {
-        find: '@constants',
-        replacement: path.resolve(__dirname, 'src/shared/constants/index.ts'),
+        find: '@consts',
+        replacement: path.resolve(__dirname, 'src/shared/consts'),
       },
       {
         find: '@contracts',
-        replacement: path.resolve(__dirname, 'src/shared/contracts/index.ts'),
+        replacement: path.resolve(__dirname, 'src/shared/contracts'),
       },
       {
         find: '@components',
-        replacement: path.resolve(__dirname, 'src/shared/components/index.tsx'),
+        replacement: path.resolve(__dirname, 'src/shared/components'),
       },
       {
         find: '@styles',

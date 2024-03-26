@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import type { Nullable } from '@typings';
+import type { Nullable } from '@typings/common';
 
 type ScrollType = Record<string, string>;
 

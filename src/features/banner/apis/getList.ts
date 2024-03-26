@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-import { filterBannerList } from '@entities/banner/contracts';
+import { filterBannerListResponse } from '@features/banner/libs/filterResponse';
+
 import type { IBannerList } from '@entities/banner/types';
 
 import { utilTimeSleep } from '@utils/util';
@@ -13,7 +14,7 @@ const apiGetBannerList = async ({ page }: IParams): Promise<IBannerList> => {
 
   await utilTimeSleep(1);
 
-  const data = filterBannerList(response.data);
+  const data = filterBannerListResponse(response.data);
 
   return data;
 };

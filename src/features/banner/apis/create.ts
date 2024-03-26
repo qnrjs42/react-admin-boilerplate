@@ -4,7 +4,7 @@ import { apiUploadImage } from '@features/upload/apis';
 
 import type { BannerFormDto } from '@entities/banner/types';
 
-import type { FileWithDropzone } from '@typings';
+import type { FileWithDropzone } from '@typings/common';
 
 interface IParams extends BannerFormDto {
   imageFiles?: FileWithDropzone[];

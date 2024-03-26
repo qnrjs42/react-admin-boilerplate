@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '@shadcn-ui/ui';
 
-import { BottomRightWrapper, PageContainer } from '..';
+import BottomRightWrapper from '@components/BottomRightWrapper';
+import PageContainer from '@components/PageContainer';
 
 type Story = StoryObj<typeof BottomRightWrapper>;
 

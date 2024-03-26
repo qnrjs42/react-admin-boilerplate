@@ -3,14 +3,14 @@ import { useParams } from 'react-router-dom';
 
 import { useToast } from '@shadcn-ui/hooks';
 
-import { apiChangeRankBannerList } from '@features/banner/apis';
+import apiChangeRankBannerList from '@features/banner/apis/changeRankList';
 
 import { BANNER_KEYS } from '@entities/banner/consts';
 import { IBannerItem, IBannerList } from '@entities/banner/types';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
-import { TOAST_DURATION } from '@constants';
+import { TOAST_DURATION } from '@src/shared/consts/common';
 
 const useChangeRankBannerList = () => {
   const params = useParams();

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import type { ITableDefaultItem } from '@typings';
+import type { ITableDefaultItem } from '@typings/common';
 
-import { SortableTable } from '..';
+import SortableTable from '@components/SortableTable';
 
 type Story = StoryObj<typeof SortableTable>;
 

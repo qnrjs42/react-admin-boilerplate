@@ -1,4 +1,4 @@
-import type { FileWithDropzone } from '@typings';
+import type { FileWithDropzone } from '@typings/common';
 
 export const utilTimeSleep = (sec: number): Promise<void> => {
   return new Promise(resolve => {

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import type { IMenuRoute } from '@typings';
+import type { IMenuRoute } from '@typings/common';
 
 import { LoginFormDtoSchema } from './contracts';
 

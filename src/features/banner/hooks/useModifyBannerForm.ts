@@ -5,17 +5,17 @@ import { useNavigate } from 'react-router-dom';
 
 import { useToast } from '@shadcn-ui/hooks';
 
-import { apiModifyBanner } from '@features/banner/apis';
+import apiModifyBanner from '@features/banner/apis/modify';
 
 import { BANNER_KEYS, BANNER_TOAST_MESSAGES } from '@entities/banner/consts';
 import { BannerFormDtoSchema } from '@entities/banner/contracts';
 import type { BannerFormDto, IBanner } from '@entities/banner/types';
 
-import { useImageFiles } from '@hooks';
+import useImageFiles from '@hooks/useImageFiles';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
-import { TOAST_DURATION } from '@constants';
+import { TOAST_DURATION } from '@src/shared/consts/common';
 
 const useModifyBannerForm = (banner?: IBanner) => {
   const { toast } = useToast();

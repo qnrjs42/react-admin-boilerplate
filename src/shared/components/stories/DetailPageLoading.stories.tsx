@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { DetailPageLoading } from '..';
+import DetailPageLoading from '@components/DetailPageLoading';
 
 type Story = StoryObj<typeof DetailPageLoading>;
 

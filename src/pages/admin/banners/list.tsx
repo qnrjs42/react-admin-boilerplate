@@ -3,29 +3,26 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Button } from '@shadcn-ui/ui';
 
-import {
-  useGetBannerList,
-  useDeleteBannerListItem,
-  useToggleShowBannerListItem,
-  useChangeRankBannerList,
-} from '@features/banner/hooks';
+import useChangeRankBannerList from '@features/banner/hooks/useChangeRankList';
+import useDeleteBannerListItem from '@features/banner/hooks/useDeleteListItem';
+import useGetBannerList from '@features/banner/hooks/useGetList';
+import useToggleShowBannerListItem from '@features/banner/hooks/useToggleShowListItem';
 
 import { BANNER_LIST_TABLE_HEADERS } from '@entities/banner/consts';
 import { IBannerItem } from '@entities/banner/types';
 
-import { useChangePage, useTableSearch } from '@hooks';
+import useChangePage from '@hooks/useChangePage';
+import useTableSearch from '@hooks/useTableSearch';
 
-import { ROUTE_PATHS } from '@constants';
+import BottomRightWrapper from '@components/BottomRightWrapper';
+import DeleteDialog from '@components/DeleteDialog';
+import PageContainer from '@components/PageContainer';
+import SortableTableDialog from '@components/SortableTableDialog';
+import Table from '@components/Table';
+import TablePagination from '@components/TablePagination';
+import TableSearch from '@components/TableSearch';
 
-import {
-  BottomRightWrapper,
-  DeleteDialog,
-  PageContainer,
-  SortableTableDialog,
-  Table,
-  TablePagination,
-  TableSearch,
-} from '@components';
+import { ROUTE_PATHS } from '@src/shared/consts/routes';
 
 const AdminBannerListPage: FC = () => {
   const navigate = useNavigate();

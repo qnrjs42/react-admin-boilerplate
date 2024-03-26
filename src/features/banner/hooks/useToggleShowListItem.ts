@@ -3,14 +3,14 @@ import { useParams } from 'react-router-dom';
 
 import { useToast } from '@shadcn-ui/hooks';
 
-import { apiShowBanner } from '@features/banner/apis';
+import apiShowBanner from '@features/banner/apis/show';
 
 import { BANNER_KEYS } from '@entities/banner/consts';
 import type { IBannerItem, IBannerList } from '@entities/banner/types';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
-import { TOAST_DURATION } from '@constants';
+import { TOAST_DURATION } from '@src/shared/consts/common';
 
 const useToggleShowBannerListItem = () => {
   const params = useParams();

@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { SearchFormDtoSchema } from '@contracts';
+import { SearchFormDtoSchema } from '@contracts/common';
 
-type Nullable<T> = T | null;
+export type Nullable<T> = T | null;
 
-interface IMenuRoute {
+export interface IMenuRoute {
   parentMenuName: string;
   path: string;
   menuName: string;
@@ -15,30 +15,20 @@ interface IMenuRoute {
 
 type TableItemType = string | number | boolean;
 
-type ITableItem = Record<string, TableItemType>;
+export type ITableItem = Record<string, TableItemType>;
 
-interface IList<T> {
+export interface IList<T> {
   page: number;
   total: number;
   items: T[];
 }
 
-interface ITableDefaultItem {
+export interface ITableDefaultItem {
   id: string;
   rank?: number;
   title?: string;
 }
 
-type SearchFormDto = z.infer<typeof SearchFormDtoSchema>;
+export type SearchFormDto = z.infer<typeof SearchFormDtoSchema>;
 
-type FileWithDropzone = File & { preview: string; isRemote?: boolean };
-
-export type {
-  IMenuRoute,
-  ITableItem,
-  IList,
-  ITableDefaultItem,
-  SearchFormDto,
-  FileWithDropzone,
-  Nullable,
-};
+export type FileWithDropzone = File & { preview: string; isRemote?: boolean };

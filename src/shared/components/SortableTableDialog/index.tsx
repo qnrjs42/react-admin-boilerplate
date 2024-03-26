@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from '@shadcn-ui/ui';
 
-import type { ITableDefaultItem } from '@typings';
+import type { ITableDefaultItem } from '@typings/common';
 
 import SortableTable from '../SortableTable';
 

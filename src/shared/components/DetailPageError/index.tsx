@@ -3,7 +3,7 @@ import type { FC } from 'react';
 
 import { Alert, AlertTitle, AlertDescription } from '@shadcn-ui/ui';
 
-import { PageContainer } from '@components';
+import PageContainer from '@components/PageContainer';
 
 const DetailPageError: FC = () => {
   return (

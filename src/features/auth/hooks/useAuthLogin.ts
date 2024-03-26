@@ -13,9 +13,11 @@ import type { LoginFormDto } from '@entities/auth/types';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
-import { useMeStore } from '@stores';
+import useMeStore from '@stores/me';
 
-import { ROUTE_PATHS, STORAGE_KEYS, TOAST_DURATION } from '@constants';
+import { TOAST_DURATION } from '@src/shared/consts/common';
+import { ROUTE_PATHS } from '@src/shared/consts/routes';
+import { STORAGE_KEYS } from '@src/shared/consts/storage';
 
 const useAuthLogin = () => {
   const { toast } = useToast();

@@ -1,7 +1,7 @@
 import { AUTH_CERTIFY_MENU_CODES } from '@entities/auth/consts';
 import type { IAuthority } from '@entities/auth/types';
 
-import type { IMenuRoute } from '@typings';
+import type { IMenuRoute } from '@typings/common';
 
 export const filterAuthCertifyResponse = (
   response: Record<string, string>[],
