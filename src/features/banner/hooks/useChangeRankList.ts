@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import { useToast } from '@shadcn-ui/hooks';
 
-import { apiChangeRankBannerList } from '@features/banner/apis';
+import apiChangeRankBannerList from '@features/banner/apis/changeRankList';
 
 import { BANNER_KEYS } from '@entities/banner/consts';
 import { IBannerItem, IBannerList } from '@entities/banner/types';

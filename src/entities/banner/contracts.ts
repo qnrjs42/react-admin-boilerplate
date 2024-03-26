@@ -1,39 +1,5 @@
 import { z } from 'zod';
 
-import { utilRemoteImageUrlToFiles } from '@utils/util';
-
-import type { IBanner, IBannerList } from './types';
-
-export const filterBannerList = (response: any): IBannerList => {
-  const items = response.data.list.map((item: any) => ({
-    id: item.idx,
-    title: item?.title || '',
-    rank: item?.rank || 0,
-    url: item?.url || '',
-    imageUrl: item?.imageUrl || '',
-    isShow: item?.isShow || false,
-    isDelete: false,
-  }));
-
-  return {
-    page: response.data?.page || 1,
-    total: response.data?.totalCount || items.length,
-    items,
-  };
-};
-
-export const filterBanner = (response: any): IBanner => {
-  return {
-    id: response.data.idx,
-    title: response.data?.title || '',
-    rank: response.data?.rank || 0,
-    imageUrl: response.data?.imageUrl || '',
-    imageFiles: response?.data?.imageUrl ? utilRemoteImageUrlToFiles(response.data.imageUrl) : [],
-    url: response.data?.url || '',
-    isShow: response.data?.isShow || false,
-  };
-};
-
 export const BannerFormDtoSchema = z.object({
   title: z
     .string()

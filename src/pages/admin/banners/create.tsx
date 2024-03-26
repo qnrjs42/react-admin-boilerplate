@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { useCreateBannerForm } from '@features/banner/hooks';
-import { BannerForm } from '@features/banner/ui';
+import useCreateBannerForm from '@features/banner/hooks/useCreateBannerForm';
+import BannerForm from '@features/banner/ui/Form';
 
 import { PageContainer } from '@components';
 

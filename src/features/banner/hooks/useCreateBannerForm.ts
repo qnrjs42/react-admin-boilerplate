@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useToast } from '@shadcn-ui/hooks';
 
-import { apiCreateBanner } from '@features/banner/apis';
+import apiCreateBanner from '@features/banner/apis/create';
 
 import { BANNER_KEYS, BANNER_TOAST_MESSAGES } from '@entities/banner/consts';
 import { BannerFormDtoSchema } from '@entities/banner/contracts';

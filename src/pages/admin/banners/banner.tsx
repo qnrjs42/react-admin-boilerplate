@@ -2,8 +2,10 @@ import type { FC } from 'react';
 
 import { DetailWidget } from '@widgets/index';
 
-import { useDeleteBanner, useGetBanner, useModifyBannerForm } from '@features/banner/hooks';
-import { BannerForm } from '@features/banner/ui';
+import useDeleteBanner from '@features/banner/hooks/useDelete';
+import useGetBanner from '@features/banner/hooks/useGetBanner';
+import useModifyBannerForm from '@features/banner/hooks/useModifyBannerForm';
+import BannerForm from '@features/banner/ui/Form';
 
 import type { IBanner } from '@entities/banner/types';
 

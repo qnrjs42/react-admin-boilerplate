@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-import { filterBanner } from '@entities/banner/contracts';
+import { filterBannerResponse } from '@features/banner/libs/filterResponse';
+
 import type { IBanner } from '@entities/banner/types';
 
 interface IParams {
@@ -11,7 +12,7 @@ const apiGetBanner = async (params: IParams): Promise<IBanner> => {
 
   const response = await axios.get(`/api/banner/${params.id}`);
 
-  return filterBanner(response.data);
+  return filterBannerResponse(response.data);
 };
 
 export default apiGetBanner;

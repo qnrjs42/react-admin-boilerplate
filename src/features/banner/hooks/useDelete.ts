@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useToast } from '@shadcn-ui/hooks';
 
-import { apiDeleteBanner } from '@features/banner/apis';
+import apiDeleteBanner from '@features/banner/apis/delete';
 
 import { BANNER_KEYS, BANNER_TOAST_MESSAGES } from '@entities/banner/consts';
 import type { IBanner } from '@entities/banner/types';

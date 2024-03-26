@@ -3,12 +3,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Button } from '@shadcn-ui/ui';
 
-import {
-  useGetBannerList,
-  useDeleteBannerListItem,
-  useToggleShowBannerListItem,
-  useChangeRankBannerList,
-} from '@features/banner/hooks';
+import useChangeRankBannerList from '@features/banner/hooks/useChangeRankList';
+import useDeleteBannerListItem from '@features/banner/hooks/useDeleteListItem';
+import useGetBannerList from '@features/banner/hooks/useGetList';
+import useToggleShowBannerListItem from '@features/banner/hooks/useToggleShowListItem';
 
 import { BANNER_LIST_TABLE_HEADERS } from '@entities/banner/consts';
 import { IBannerItem } from '@entities/banner/types';
