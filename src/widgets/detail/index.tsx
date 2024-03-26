@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import DetailPageError from '@components/DetailPageError';
 import DetailPageLoading from '@components/DetailPageLoading';
@@ -7,9 +7,8 @@ import PageContainer from '@components/PageContainer';
 interface IProps {
   isLoading: boolean;
   isError: boolean;
-  children: React.ReactNode;
 }
-const DetailWidget: FC<IProps> = ({ isLoading, isError, children }) => {
+const DetailWidget = ({ isLoading, isError, children }: PropsWithChildren<IProps>) => {
   if (isLoading) return <DetailPageLoading />;
   if (isError) return <DetailPageError />;
 

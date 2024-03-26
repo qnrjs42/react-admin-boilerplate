@@ -1,13 +1,10 @@
-import type { FC } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import { cn } from '@shadcn-ui/utils';
 
 import useSidebarStore from '@stores/sidebar';
 
-interface IProps {
-  children: React.ReactNode;
-}
-const RightWidget: FC<IProps> = ({ children }) => {
+const RightWidget = ({ children }: PropsWithChildren) => {
   const isSidebarOpen = useSidebarStore<boolean>(state => state.isSidebarOpen);
 
   return (
