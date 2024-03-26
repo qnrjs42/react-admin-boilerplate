@@ -7,12 +7,9 @@ import { useToast } from '@shadcn-ui/hooks';
 
 import { apiCreateBanner } from '@features/banner/apis';
 
-import {
-  BannerFormDtoSchema,
-  BANNER_KEYS,
-  type BannerFormDto,
-  BANNER_TOAST_MESSAGES,
-} from '@entities/banner';
+import { BANNER_KEYS, BANNER_TOAST_MESSAGES } from '@entities/banner/consts';
+import { BannerFormDtoSchema } from '@entities/banner/contracts';
+import type { BannerFormDto } from '@entities/banner/types';
 
 import { useImageFiles } from '@hooks';
 

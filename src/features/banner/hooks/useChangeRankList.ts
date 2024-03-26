@@ -5,7 +5,8 @@ import { useToast } from '@shadcn-ui/hooks';
 
 import { apiChangeRankBannerList } from '@features/banner/apis';
 
-import { BANNER_KEYS, type IBannerItem, type IBannerList } from '@entities/banner';
+import { BANNER_KEYS } from '@entities/banner/consts';
+import { IBannerItem, IBannerList } from '@entities/banner/types';
 
 import { utilAxiosError } from '@utils/utilAxios';
 

@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-import { filterBannerList, type IBannerList } from '@entities/banner';
+import { filterBannerList } from '@entities/banner/contracts';
+import type { IBannerList } from '@entities/banner/types';
 
 import { utilTimeSleep } from '@utils/util';
 

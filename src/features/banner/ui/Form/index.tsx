@@ -3,7 +3,7 @@ import type { UseFormReturn } from 'react-hook-form';
 
 import { Button, Form, FormField } from '@shadcn-ui/ui';
 
-import type { BannerFormDto } from '@entities/banner';
+import type { BannerFormDto } from '@entities/banner/types';
 
 import type { FileWithDropzone } from '@typings';
 

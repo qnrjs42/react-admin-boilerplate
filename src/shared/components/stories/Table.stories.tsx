@@ -4,7 +4,7 @@ import { Button } from '@shadcn-ui/ui';
 
 import useGetBannerList from '@features/banner/hooks/useGetList';
 
-import { BANNER_LIST_TABLE_HEADERS } from '@entities/banner';
+import { BANNER_LIST_TABLE_HEADERS } from '@entities/banner/consts';
 
 import { Table } from '..';
 

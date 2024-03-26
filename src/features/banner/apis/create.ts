@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { apiUploadImage } from '@features/upload/apis';
 
-import type { BannerFormDto } from '@entities/banner';
+import type { BannerFormDto } from '@entities/banner/types';
 
 import type { FileWithDropzone } from '@typings';
 
