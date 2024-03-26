@@ -1,7 +1,11 @@
 import { type FC, useState, useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
-import { HeaderWidget, RightWidget, SidebarWidget, MainWidget, ContentWidget } from '@widgets/.';
+import ContentWidget from '@widgets/content';
+import HeaderWidget from '@widgets/header';
+import MainWidget from '@widgets/main';
+import RightWidget from '@widgets/right';
+import SidebarWidget from '@widgets/sidebar';
 
 import type { IMenuRoute } from '@typings/common';
 

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { DetailWidget } from '@widgets/index';
+import DetailWidget from '@widgets/detail';
 
 import useDeleteBanner from '@features/banner/hooks/useDelete';
 import useGetBanner from '@features/banner/hooks/useGetBanner';
