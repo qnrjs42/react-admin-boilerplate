@@ -56,6 +56,7 @@ pnpm cypress
 - features/
   - apis/
   - hooks/
+  - libs/
   - ui/
 - entities/
   - consts.ts
@@ -75,6 +76,6 @@ pnpm cypress
 
 1. pages -> widgets -> features -> entities -> shared 순으로 의존성을 갖습니다.
    즉, features는 entities를 참조할 수 있지만, entities는 features를 참조할 수 없습니다.
-2. features 레이어의 각 slices의 segments는 apis, hooks, ui로 나눕니다.
-3. entities 레이어의 각 slices의 segments는 contracts, keys, types로 나눕니다.
+2. features 레이어의 각 slices의 segments는 apis, hooks, libs, ui로 나눕니다.
+3. entities 레이어의 각 slices의 segments는 consts, contracts, types로 나눕니다.
 4. 배럴 파일을 생성하지 않습니다.
