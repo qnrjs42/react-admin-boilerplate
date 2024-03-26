@@ -1,11 +1,9 @@
 import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
 
-import {
-  AdminBannerCreatePage,
-  AdminBannerListPage,
-  AdminBannerPage,
-  AdminDashboardPage,
-} from '@pages/admin';
+import AdminBannerPage from '@pages/admin/banners/banner';
+import AdminBannerCreatePage from '@pages/admin/banners/create';
+import AdminBannerListPage from '@pages/admin/banners/list';
+import AdminDashboardPage from '@pages/admin/dashboard';
 import LoginPage from '@pages/login';
 
 import AdminWidget from '@widgets/admin';
