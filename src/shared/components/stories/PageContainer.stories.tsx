@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { PageContainer } from '..';
+import PageContainer from '@components/PageContainer';
 
 type Story = StoryObj<typeof PageContainer>;
 

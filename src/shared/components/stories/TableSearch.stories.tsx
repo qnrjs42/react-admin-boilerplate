@@ -6,7 +6,7 @@ import { SearchFormDto } from '@typings';
 
 import { SearchFormDtoSchema } from '@contracts';
 
-import { TableSearch } from '..';
+import TableSearch from '@components/TableSearch';
 
 type Story = StoryObj<typeof TableSearch>;
 

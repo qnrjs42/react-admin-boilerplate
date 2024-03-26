@@ -15,15 +15,13 @@ import { useChangePage, useTableSearch } from '@hooks';
 
 import { ROUTE_PATHS } from '@constants';
 
-import {
-  BottomRightWrapper,
-  DeleteDialog,
-  PageContainer,
-  SortableTableDialog,
-  Table,
-  TablePagination,
-  TableSearch,
-} from '@components';
+import BottomRightWrapper from '@components/BottomRightWrapper';
+import DeleteDialog from '@components/DeleteDialog';
+import PageContainer from '@components/PageContainer';
+import SortableTableDialog from '@components/SortableTableDialog';
+import Table from '@components/Table';
+import TablePagination from '@components/TablePagination';
+import TableSearch from '@components/TableSearch';
 
 const AdminBannerListPage: FC = () => {
   const navigate = useNavigate();

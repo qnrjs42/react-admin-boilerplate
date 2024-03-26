@@ -22,7 +22,7 @@
     "^@stores$",
     "^@constants$",
     "^@contracts$",
-    "^@components$",
+    "^@components/(.*)$",
     "^@config$",
     "^@src/(.*)$",
     "^@styles/(.*)$",

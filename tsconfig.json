@@ -33,7 +33,7 @@
       "@typings": ["src/shared/typings/index.ts"],
       "@constants": ["src/shared/constants/index.ts"],
       "@contracts": ["src/shared/contracts/index.ts"],
-      "@components": ["src/shared/components/index.tsx"],
+      "@components/*": ["src/shared/components/*"],
       "@styles/*": ["src/shared/styles/*"],
       "@theme": ["src/shared/styles/theme.ts"],
       "@config": ["./config/config.json"],

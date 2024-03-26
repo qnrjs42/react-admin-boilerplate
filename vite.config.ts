@@ -60,7 +60,7 @@ export default defineConfig({
       },
       {
         find: '@components',
-        replacement: path.resolve(__dirname, 'src/shared/components/index.tsx'),
+        replacement: path.resolve(__dirname, 'src/shared/components'),
       },
       {
         find: '@styles',

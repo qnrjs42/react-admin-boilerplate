@@ -1,6 +1,8 @@
 import type { FC } from 'react';
 
-import { DetailPageError, DetailPageLoading, PageContainer } from '@components';
+import DetailPageError from '@components/DetailPageError';
+import DetailPageLoading from '@components/DetailPageLoading';
+import PageContainer from '@components/PageContainer';
 
 interface IProps {
   isLoading: boolean;

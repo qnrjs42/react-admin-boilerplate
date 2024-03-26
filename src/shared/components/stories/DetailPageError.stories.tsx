@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { DetailPageError } from '..';
+import DetailPageError from '@components/DetailPageError';
 
 type Story = StoryObj<typeof DetailPageError>;
 

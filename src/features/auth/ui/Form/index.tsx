@@ -5,7 +5,7 @@ import { Button, Form, FormField } from '@shadcn-ui/ui';
 
 import type { LoginFormDto } from '@entities/auth/types';
 
-import { SharedFormFieldRender } from '@components';
+import SharedFormFieldRender from '@components/FormFieldRender';
 
 interface IProps {
   title: string;

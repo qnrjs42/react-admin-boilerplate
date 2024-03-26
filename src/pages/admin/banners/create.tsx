@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import useCreateBannerForm from '@features/banner/hooks/useCreateBannerForm';
 import BannerForm from '@features/banner/ui/Form';
 
-import { PageContainer } from '@components';
+import PageContainer from '@components/PageContainer';
 
 const AdminBannerCreatePage: FC = () => {
   const { form, files, setFiles, onSubmit } = useCreateBannerForm();

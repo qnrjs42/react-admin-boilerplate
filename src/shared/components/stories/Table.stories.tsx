@@ -6,7 +6,7 @@ import useGetBannerList from '@features/banner/hooks/useGetList';
 
 import { BANNER_LIST_TABLE_HEADERS } from '@entities/banner/consts';
 
-import { Table } from '..';
+import Table from '@components/Table';
 
 type Story = StoryObj<typeof Table>;
 

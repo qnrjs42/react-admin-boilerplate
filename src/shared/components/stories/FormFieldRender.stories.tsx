@@ -5,7 +5,7 @@ import { Form, FormField } from '@shadcn-ui/ui';
 
 import { INPUT_TYPE_ATTRIBUTES } from '@constants';
 
-import { SharedFormFieldRender } from '..';
+import SharedFormFieldRender from '@components/FormFieldRender';
 
 type Story = StoryObj<typeof SharedFormFieldRender>;
 

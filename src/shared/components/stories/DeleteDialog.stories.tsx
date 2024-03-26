@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { DeleteDialog } from '..';
+import DeleteDialog from '@components/DeleteDialog';
 
 type Story = StoryObj<typeof DeleteDialog>;
 

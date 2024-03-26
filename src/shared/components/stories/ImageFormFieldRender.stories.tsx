@@ -7,7 +7,7 @@ import { useImageFiles } from '@hooks';
 
 import { INPUT_TYPE_ATTRIBUTES } from '@constants';
 
-import { SharedImageFormFieldRender } from '..';
+import SharedImageFormFieldRender from '@components/ImageFormFieldRender';
 
 type Story = StoryObj<typeof SharedImageFormFieldRender>;
 

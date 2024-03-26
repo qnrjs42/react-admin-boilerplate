@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import type { ITableDefaultItem } from '@typings';
 
-import { SortableTableDialog } from '..';
+import SortableTableDialog from '@components/SortableTableDialog';
 
 type Story = StoryObj<typeof SortableTableDialog>;
 

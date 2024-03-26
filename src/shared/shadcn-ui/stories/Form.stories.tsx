@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { LoginFormDtoSchema } from '@entities/auth/contracts';
 import type { LoginFormDto } from '@entities/auth/types';
 
-import { SharedFormFieldRender } from '@components';
+import SharedFormFieldRender from '@components/FormFieldRender';
 
 import { Button, Form, FormField } from '../ui';
 
