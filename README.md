@@ -58,12 +58,12 @@ pnpm cypress
   - hooks/
   - ui/
 - entities/
+  - consts.ts
   - contracts.ts
-  - keys.ts
   - types.ts
 - shared/
   - components/
-  - constants/
+  - consts/
   - contracts/
   - hooks/
   - shadcn-ui/
@@ -77,3 +77,4 @@ pnpm cypress
    즉, features는 entities를 참조할 수 있지만, entities는 features를 참조할 수 없습니다.
 2. features 레이어의 각 slices의 segments는 apis, hooks, ui로 나눕니다.
 3. entities 레이어의 각 slices의 segments는 contracts, keys, types로 나눕니다.
+4. 배럴 파일을 생성하지 않습니다.
