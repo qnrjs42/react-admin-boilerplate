@@ -1,6 +1,17 @@
 ## React Admin Boilerplate
 
-[react-ts + vite + swc](https://github.com/vitejs/vite-plugin-react-swc) + [tailwindcss + shadcn-ui](https://ui.shadcn.com/docs/installation/vite) + [react-query](https://tanstack.com/query/latest/docs/framework/react/overview) + [zustand](https://github.com/pmndrs/zustand) + [msw](https://mswjs.io) + [react-hook-form](https://react-hook-form.com/) + [zod](https://zod.dev) + [storybook](https://storybook.js.org) + [cypress](https://www.cypress.io)
+[![Static Badge](https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Static Badge](https://img.shields.io/badge/vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Static Badge](https://img.shields.io/badge/swc-FCB075?style=for-the-badge&logo=swc&logoColor=white)](https://github.com/vitejs/vite-plugin-react-swc)
+[![Static Badge](https://img.shields.io/badge/tailwindcss-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Static Badge](https://img.shields.io/badge/shadcn--ui-000000?style=for-the-badge&logo=shadcn/ui&logoColor=white)](https://ui.shadcn.com/docs/installation/vite)
+[![Static Badge](https://img.shields.io/badge/react--query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)](https://tanstack.com/query/latest/docs/framework/react/overview)
+[![Static Badge](https://img.shields.io/badge/zustand-000000?style=for-the-badge&logo=zustand&logoColor=white)](https://github.com/pmndrs/zustand)
+[![Static Badge](https://img.shields.io/badge/msw-FF6A33?style=for-the-badge&logo=msw&logoColor=white)](https://mswjs.io)
+[![Static Badge](https://img.shields.io/badge/react--hook--form-EC5990?style=for-the-badge&logo=react-hook-form&logoColor=white)](https://react-hook-form.com)
+[![Static Badge](https://img.shields.io/badge/zod-3068B7?style=for-the-badge&logo=zod&logoColor=white)](https://zod.dev)
+[![Static Badge](https://img.shields.io/badge/storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org)
+[![Static Badge](https://img.shields.io/badge/cypress-007780?style=for-the-badge&logo=cypress&logoColor=white)](https://www.cypress.io)
 
 ## Installation & Run
 
