@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useToast } from '@shadcn-ui/hooks';
 
-import { apiAuthLogin } from '@features/auth/apis';
+import apiAuthLogin from '@features/auth/apis/login';
 
 import { AUTH_KEYS } from '@entities/auth/consts';
 import { LoginFormDtoSchema } from '@entities/auth/contracts';

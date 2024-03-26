@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { useAuthLogin } from '@features/auth/hooks';
+import useAuthLogin from '@features/auth/hooks/useAuthLogin';
 import { LoginForm, LoginMainImage } from '@features/auth/ui';
 
 const LoginPage: FC = () => {

@@ -1,5 +1,6 @@
-import { apiAuthCertify } from '.';
 import axios from 'axios';
+
+import apiAuthCertify from '@features/auth/apis/certify';
 
 import type { LoginFormDto, IMe } from '@entities/auth/types';
 

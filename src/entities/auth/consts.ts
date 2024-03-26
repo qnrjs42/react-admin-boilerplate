@@ -4,3 +4,12 @@ export const AUTH_KEYS = {
   GET_NICKNAME: 'AUTH_GET_NICKNAME',
   CERTIFY: 'AUTH_CERTIFY',
 } as const;
+
+export const AUTH_CERTIFY_MENU_CODES = {
+  BANNERS: {
+    LIST: 'AUTH_BANNER_LIST',
+    CREATE: 'AUTH_BANNER_CREATE',
+    MODIFY: 'AUTH_BANNER_MODIFY',
+    DELETE: 'AUTH_BANNER_DELETE',
+  },
+} as const;

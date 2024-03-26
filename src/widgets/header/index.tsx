@@ -12,7 +12,8 @@ import {
   DropdownMenuTrigger,
 } from '@shadcn-ui/ui';
 
-import { apiAuthGetNickname, apiAuthLogout } from '@features/auth/apis';
+import apiAuthGetNickname from '@features/auth/apis/getNickname';
+import apiAuthLogout from '@features/auth/apis/logout';
 
 import { AUTH_KEYS } from '@entities/auth/consts';
 
