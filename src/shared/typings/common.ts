@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { SearchFormDtoSchema } from '@contracts';
+import { SearchFormDtoSchema } from '@contracts/common';
 
 type Nullable<T> = T | null;
 

@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 
 import { SearchFormDto } from '@typings';
 
-import { SearchFormDtoSchema } from '@contracts';
+import { SearchFormDtoSchema } from '@contracts/common';
 
 import TableSearch from '@components/TableSearch';
 

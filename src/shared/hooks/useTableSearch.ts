@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import type { SearchFormDto } from '@typings';
 
-import { SearchFormDtoSchema } from '@contracts';
+import { SearchFormDtoSchema } from '@contracts/common';
 
 const useTableSearch = (routeName: string) => {
   const navigate = useNavigate();

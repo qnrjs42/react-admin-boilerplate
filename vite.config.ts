@@ -56,7 +56,7 @@ export default defineConfig({
       },
       {
         find: '@contracts',
-        replacement: path.resolve(__dirname, 'src/shared/contracts/index.ts'),
+        replacement: path.resolve(__dirname, 'src/shared/contracts'),
       },
       {
         find: '@components',

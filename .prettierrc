@@ -21,7 +21,7 @@
     "^@typings$",
     "^@stores$",
     "^@constants/(.*)$",
-    "^@contracts$",
+    "^@contracts/(.*)$",
     "^@components/(.*)$",
     "^@config$",
     "^@src/(.*)$",

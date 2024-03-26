@@ -32,7 +32,7 @@
       "@hooks": ["src/shared/hooks/index.ts"],
       "@typings": ["src/shared/typings/index.ts"],
       "@constants/*": ["src/shared/consts/*"],
-      "@contracts": ["src/shared/contracts/index.ts"],
+      "@contracts/*": ["src/shared/contracts/*"],
       "@components/*": ["src/shared/components/*"],
       "@styles/*": ["src/shared/styles/*"],
       "@theme": ["src/shared/styles/theme.ts"],
