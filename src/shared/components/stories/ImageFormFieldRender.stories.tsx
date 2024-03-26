@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import { Form, FormField } from '@shadcn-ui/ui';
 
-import useImageFiles from '@hooks/useImageFiles';
+import { useImageFiles } from '@hooks';
 
 import { INPUT_TYPE_ATTRIBUTES } from '@constants';
 

@@ -4,9 +4,9 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { Skeleton } from '@shadcn-ui/ui';
 import { cn } from '@shadcn-ui/utils';
 
-import type { ITableItem, ITableDefaultItem } from '@typings/common';
+import type { ITableItem, ITableDefaultItem } from '@typings';
 
-import useTableStore from '@stores/table';
+import { useTableStore } from '@stores';
 
 interface IProps<T> {
   headers: readonly string[];

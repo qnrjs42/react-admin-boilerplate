@@ -6,7 +6,7 @@ import { IoClose } from 'react-icons/io5';
 import { FormControl, FormItem, FormLabel, FormMessage } from '@shadcn-ui/ui';
 import { cn } from '@shadcn-ui/utils';
 
-import type { FileWithDropzone } from '@typings/common';
+import type { FileWithDropzone } from '@typings';
 
 interface IProps<TName extends string> extends React.InputHTMLAttributes<HTMLInputElement> {
   files: FileWithDropzone[];

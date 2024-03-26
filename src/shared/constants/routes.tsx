@@ -1,6 +1,6 @@
 import { PiFlagBannerBold } from 'react-icons/pi';
 
-import type { IMenuRoute } from '@typings/common';
+import type { IMenuRoute } from '@typings';
 
 export const ROUTE_PATHS = {
   LOGIN: '/login',

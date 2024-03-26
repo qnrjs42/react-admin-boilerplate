@@ -2,9 +2,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useForm } from 'react-hook-form';
 
-import { SearchFormDto } from '@typings/common';
+import { SearchFormDto } from '@typings';
 
-import { SearchFormDtoSchema } from '@src/shared/contracts/common';
+import { SearchFormDtoSchema } from '@contracts';
 
 import { TableSearch } from '..';
 

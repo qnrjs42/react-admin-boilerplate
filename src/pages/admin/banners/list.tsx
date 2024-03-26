@@ -12,8 +12,7 @@ import {
 
 import { BANNER_LIST_TABLE_HEADERS, type IBannerItem } from '@entities/banner';
 
-import useChangePage from '@hooks/useChangePage';
-import useTableSearch from '@hooks/useTableSearch';
+import { useChangePage, useTableSearch } from '@hooks';
 
 import { ROUTE_PATHS } from '@constants';
 

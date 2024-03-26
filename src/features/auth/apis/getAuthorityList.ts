@@ -1,6 +1,6 @@
 import type { IAuthority } from '@entities/auth';
 
-import type { IMenuRoute } from '@typings/common';
+import type { IMenuRoute } from '@typings';
 
 import { NESTED_ROUTES } from '@constants';
 

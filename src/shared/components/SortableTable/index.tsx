@@ -5,7 +5,7 @@ import { ReactSortable, type ItemInterface, type Sortable } from 'react-sortable
 
 import { cn } from '@shadcn-ui/utils';
 
-import type { ITableDefaultItem } from '@typings/common';
+import type { ITableDefaultItem } from '@typings';
 
 interface IProps<T> {
   items: T[];

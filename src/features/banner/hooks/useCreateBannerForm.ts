@@ -14,7 +14,7 @@ import {
   BANNER_TOAST_MESSAGES,
 } from '@entities/banner';
 
-import useImageFiles from '@hooks/useImageFiles';
+import { useImageFiles } from '@hooks';
 
 import { utilAxiosError } from '@utils/utilAxios';
 

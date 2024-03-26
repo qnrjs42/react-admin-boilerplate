@@ -2,9 +2,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import type { SearchFormDto } from '@typings/common';
+import type { SearchFormDto } from '@typings';
 
-import { SearchFormDtoSchema } from '../contracts/common';
+import { SearchFormDtoSchema } from '@contracts';
 
 const useTableSearch = (routeName: string) => {
   const navigate = useNavigate();

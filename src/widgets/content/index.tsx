@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import type { IMenuRoute } from '@typings/common';
+import type { IMenuRoute } from '@typings';
 
 interface IProps {
   currentRoute: IMenuRoute | null;

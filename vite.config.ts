@@ -31,28 +31,32 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/entities'),
       },
       {
-        find: '@hooks',
-        replacement: path.resolve(__dirname, 'src/shared/hooks'),
-      },
-      {
         find: '@utils',
         replacement: path.resolve(__dirname, 'src/shared/utils'),
-      },
-      {
-        find: '@typings',
-        replacement: path.resolve(__dirname, 'src/shared/typings'),
-      },
-      {
-        find: '@stores',
-        replacement: path.resolve(__dirname, 'src/shared/stores'),
       },
       {
         find: '@shadcn-ui',
         replacement: path.resolve(__dirname, 'src/shared/shadcn-ui'),
       },
       {
+        find: '@stores',
+        replacement: path.resolve(__dirname, 'src/shared/stores/index.ts'),
+      },
+      {
+        find: '@hooks',
+        replacement: path.resolve(__dirname, 'src/shared/hooks/index.ts'),
+      },
+      {
+        find: '@typings',
+        replacement: path.resolve(__dirname, 'src/shared/typings/index.ts'),
+      },
+      {
         find: '@constants',
         replacement: path.resolve(__dirname, 'src/shared/constants/index.ts'),
+      },
+      {
+        find: '@contracts',
+        replacement: path.resolve(__dirname, 'src/shared/contracts/index.ts'),
       },
       {
         find: '@components',

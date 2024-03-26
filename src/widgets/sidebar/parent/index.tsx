@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { cn } from '@shadcn-ui/utils';
 
-import type { IMenuRoute } from '@typings/common';
+import type { IMenuRoute } from '@typings';
 
 interface IProps {
   route: IMenuRoute;

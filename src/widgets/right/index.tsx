@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { cn } from '@shadcn-ui/utils';
 
-import useSidebarStore from '@stores/sidebar';
+import { useSidebarStore } from '@stores';
 
 interface IProps {
   children: React.ReactNode;

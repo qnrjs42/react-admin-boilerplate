@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 import type { IMe } from '@entities/auth';
 
-import type { Nullable } from '@typings/common';
+import type { Nullable } from '@typings';
 
 interface IMeStore {
   me: Nullable<IMe>;

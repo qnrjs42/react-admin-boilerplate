@@ -11,7 +11,7 @@ import { type LoginFormDto, LoginFormDtoSchema, AUTH_KEYS } from '@entities/auth
 
 import { utilAxiosError } from '@utils/utilAxios';
 
-import useMeStore from '@stores/me';
+import { useMeStore } from '@stores';
 
 import { ROUTE_PATHS, STORAGE_KEYS, TOAST_DURATION } from '@constants';
 
