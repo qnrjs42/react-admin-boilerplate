@@ -4,7 +4,7 @@ import { useLayoutEffect, useState } from 'react';
 
 import apiAuthCertify from '@features/auth/apis/certify';
 
-import { AUTH_KEYS } from '@entities/auth/constants';
+import { AUTH_KEYS } from '@entities/auth/consts';
 
 import { useMeStore } from '@stores';
 

@@ -14,7 +14,7 @@ import {
 
 import { apiAuthGetNickname, apiAuthLogout } from '@features/auth/apis';
 
-import { AUTH_KEYS } from '@entities/auth/constants';
+import { AUTH_KEYS } from '@entities/auth/consts';
 
 import { useMeStore } from '@stores';
 
