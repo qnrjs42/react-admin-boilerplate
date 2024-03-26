@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import { apiGetBannerList } from '@features/banner/apis';
 
-import { BANNER_KEYS, type IBannerList } from '@entities/banner';
+import { BANNER_KEYS } from '@entities/banner/consts';
+import type { IBannerList } from '@entities/banner/types';
 
 interface IReturn {
   data?: IBannerList;

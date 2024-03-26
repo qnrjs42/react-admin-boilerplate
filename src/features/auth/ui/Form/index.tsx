@@ -3,7 +3,7 @@ import type { UseFormReturn } from 'react-hook-form';
 
 import { Button, Form, FormField } from '@shadcn-ui/ui';
 
-import type { LoginFormDto } from '@entities/auth';
+import type { LoginFormDto } from '@entities/auth/types';
 
 import { SharedFormFieldRender } from '@components';
 

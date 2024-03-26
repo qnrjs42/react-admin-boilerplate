@@ -1,7 +1,7 @@
 import { apiAuthCertify } from '.';
 import axios from 'axios';
 
-import type { LoginFormDto, IMe } from '@entities/auth';
+import type { LoginFormDto, IMe } from '@entities/auth/types';
 
 interface IResponse {
   data: {

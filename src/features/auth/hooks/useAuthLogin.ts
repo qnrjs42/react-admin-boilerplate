@@ -7,7 +7,9 @@ import { useToast } from '@shadcn-ui/hooks';
 
 import { apiAuthLogin } from '@features/auth/apis';
 
-import { type LoginFormDto, LoginFormDtoSchema, AUTH_KEYS } from '@entities/auth';
+import { AUTH_KEYS } from '@entities/auth/consts';
+import { LoginFormDtoSchema } from '@entities/auth/contracts';
+import type { LoginFormDto } from '@entities/auth/types';
 
 import { utilAxiosError } from '@utils/utilAxios';
 

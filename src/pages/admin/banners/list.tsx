@@ -10,7 +10,8 @@ import {
   useChangeRankBannerList,
 } from '@features/banner/hooks';
 
-import { BANNER_LIST_TABLE_HEADERS, type IBannerItem } from '@entities/banner';
+import { BANNER_LIST_TABLE_HEADERS } from '@entities/banner/consts';
+import { IBannerItem } from '@entities/banner/types';
 
 import { useChangePage, useTableSearch } from '@hooks';
 

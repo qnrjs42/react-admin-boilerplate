@@ -5,7 +5,7 @@ import { DetailWidget } from '@widgets/index';
 import { useDeleteBanner, useGetBanner, useModifyBannerForm } from '@features/banner/hooks';
 import { BannerForm } from '@features/banner/ui';
 
-import type { IBanner } from '@entities/banner';
+import type { IBanner } from '@entities/banner/types';
 
 const AdminBannerPage: FC = () => {
   const { banner, isLoading, isError } = useGetBanner();

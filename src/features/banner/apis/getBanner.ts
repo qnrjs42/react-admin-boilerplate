@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-import { type IBanner, filterBanner } from '@entities/banner';
+import { filterBanner } from '@entities/banner/contracts';
+import type { IBanner } from '@entities/banner/types';
 
 interface IParams {
   id?: string;
