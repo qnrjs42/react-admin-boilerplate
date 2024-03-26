@@ -1,4 +1,3 @@
-import type { UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
 
 import type { FileWithDropzone, IList } from '@typings/common';
@@ -22,6 +21,3 @@ export interface IBannerItem extends Omit<IBanner, 'imageFiles'> {
 export interface IBannerList extends IList<IBannerItem> {}
 
 export type BannerFormDto = z.infer<typeof BannerFormDtoSchema>;
-
-export type UseBannerForm = UseFormReturn<BannerFormDto, any, undefined>;
-export type BannerFormKeys = keyof Omit<BannerFormDto, 'imageFiles'>;
