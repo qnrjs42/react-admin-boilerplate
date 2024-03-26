@@ -13,7 +13,7 @@ import type { LoginFormDto } from '@entities/auth/types';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
-import { useMeStore } from '@stores';
+import useMeStore from '@stores/me';
 
 import { TOAST_DURATION } from '@src/shared/consts/common';
 import { ROUTE_PATHS } from '@src/shared/consts/routes';

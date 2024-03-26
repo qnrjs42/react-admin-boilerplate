@@ -6,7 +6,7 @@ import { cn } from '@shadcn-ui/utils';
 
 import type { IMenuRoute } from '@typings';
 
-import { useSidebarStore } from '@stores';
+import useSidebarStore from '@stores/sidebar';
 
 import SidebarWidgetChildMenu from './child';
 import SidebarInOut from './inout';

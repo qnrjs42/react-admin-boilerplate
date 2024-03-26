@@ -19,7 +19,7 @@
     "^@hooks/(.*)$",
     "^@utils/(.*)$",
     "^@typings$",
-    "^@stores$",
+    "^@stores/(.*)$",
     "^@consts/(.*)$",
     "^@contracts/(.*)$",
     "^@components/(.*)$",

@@ -6,7 +6,7 @@ import apiAuthCertify from '@features/auth/apis/certify';
 
 import { AUTH_KEYS } from '@entities/auth/consts';
 
-import { useMeStore } from '@stores';
+import useMeStore from '@stores/me';
 
 import { STORAGE_KEYS } from '@src/shared/consts/storage';
 

@@ -40,7 +40,7 @@ export default defineConfig({
       },
       {
         find: '@stores',
-        replacement: path.resolve(__dirname, 'src/shared/stores/index.ts'),
+        replacement: path.resolve(__dirname, 'src/shared/stores'),
       },
       {
         find: '@hooks',

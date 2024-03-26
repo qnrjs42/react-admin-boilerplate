@@ -17,7 +17,7 @@ import apiAuthLogout from '@features/auth/apis/logout';
 
 import { AUTH_KEYS } from '@entities/auth/consts';
 
-import { useMeStore } from '@stores';
+import useMeStore from '@stores/me';
 
 import { TOAST_DURATION } from '@src/shared/consts/common';
 import { STORAGE_KEYS } from '@src/shared/consts/storage';

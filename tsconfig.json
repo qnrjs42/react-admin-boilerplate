@@ -28,7 +28,7 @@
       "@entities/*": ["src/entities/*"],
       "@utils/*": ["src/shared/utils/*"],
       "@shadcn-ui/*": ["src/shared/shadcn-ui/*"],
-      "@stores": ["src/shared/stores/index.ts"],
+      "@stores/*": ["src/shared/stores/*"],
       "@hooks/*": ["src/shared/hooks/*"],
       "@typings": ["src/shared/typings/index.ts"],
       "@consts/*": ["src/shared/consts/*"],
