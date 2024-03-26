@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import type { IMe, IAuthority } from '@entities/auth';
+import type { IMe, IAuthority } from '@entities/auth/types';
 
 import type { IMenuRoute } from '@typings';
 

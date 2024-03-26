@@ -12,7 +12,7 @@ import AdminWidget from '@widgets/admin';
 
 import useAxiosAuth from '@features/auth/hooks/useAxiosAuth';
 
-import type { IMe } from '@entities/auth';
+import type { IMe } from '@entities/auth/types';
 
 function App() {
   const {

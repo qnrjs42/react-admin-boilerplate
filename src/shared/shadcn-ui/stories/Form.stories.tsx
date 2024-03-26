@@ -2,7 +2,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useForm } from 'react-hook-form';
 
-import { LoginFormDtoSchema, type LoginFormDto } from '@entities/auth';
+import { LoginFormDtoSchema } from '@entities/auth/contracts';
+import type { LoginFormDto } from '@entities/auth/types';
 
 import { SharedFormFieldRender } from '@components';
 
