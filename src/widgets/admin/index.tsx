@@ -5,7 +5,8 @@ import { HeaderWidget, RightWidget, SidebarWidget, MainWidget, ContentWidget } f
 
 import type { IMenuRoute } from '@typings';
 
-import { NESTED_ROUTES, LIST_REGEXP } from '@src/shared/constants';
+import { LIST_REGEXP } from '@src/shared/consts/regexp';
+import { NESTED_ROUTES } from '@src/shared/consts/routes';
 
 const AdminWidget: FC = () => {
   const location = useLocation();

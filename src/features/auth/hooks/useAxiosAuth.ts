@@ -8,7 +8,7 @@ import { AUTH_KEYS } from '@entities/auth/consts';
 
 import { useMeStore } from '@stores';
 
-import { STORAGE_KEYS } from '@constants';
+import { STORAGE_KEYS } from '@src/shared/consts/storage';
 
 const useAxiosAuth = () => {
   const { me, setMe } = useMeStore();

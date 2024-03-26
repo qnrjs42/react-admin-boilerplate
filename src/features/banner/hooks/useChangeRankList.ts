@@ -10,7 +10,7 @@ import { IBannerItem, IBannerList } from '@entities/banner/types';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
-import { TOAST_DURATION } from '@constants';
+import { TOAST_DURATION } from '@src/shared/consts/common';
 
 const useChangeRankBannerList = () => {
   const params = useParams();

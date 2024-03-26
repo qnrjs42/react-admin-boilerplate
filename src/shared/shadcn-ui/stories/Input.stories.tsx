@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { INPUT_TYPE_ATTRIBUTES } from '@constants';
+import { INPUT_TYPE_ATTRIBUTES } from '@src/shared/consts/common';
 
 import { Input } from '../ui';
 

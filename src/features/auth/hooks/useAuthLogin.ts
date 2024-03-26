@@ -15,7 +15,9 @@ import { utilAxiosError } from '@utils/utilAxios';
 
 import { useMeStore } from '@stores';
 
-import { ROUTE_PATHS, STORAGE_KEYS, TOAST_DURATION } from '@constants';
+import { TOAST_DURATION } from '@src/shared/consts/common';
+import { ROUTE_PATHS } from '@src/shared/consts/routes';
+import { STORAGE_KEYS } from '@src/shared/consts/storage';
 
 const useAuthLogin = () => {
   const { toast } = useToast();

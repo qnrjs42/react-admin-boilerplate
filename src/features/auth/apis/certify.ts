@@ -4,7 +4,7 @@ import { filterAuthCertifyResponse } from '@features/auth/libs/filterResponse';
 
 import type { IMe } from '@entities/auth/types';
 
-import { NESTED_ROUTES } from '@constants';
+import { NESTED_ROUTES } from '@src/shared/consts/routes';
 
 interface IResponse {
   data: Record<string, string>[];

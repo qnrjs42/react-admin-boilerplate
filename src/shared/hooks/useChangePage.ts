@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-import { LIST_REGEXP } from '../constants/regexp';
+import { LIST_REGEXP } from '../consts/regexp';
 
 interface IParams {
   routePath: string;

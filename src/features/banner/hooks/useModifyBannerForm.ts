@@ -15,7 +15,7 @@ import { useImageFiles } from '@hooks';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
-import { TOAST_DURATION } from '@constants';
+import { TOAST_DURATION } from '@src/shared/consts/common';
 
 const useModifyBannerForm = (banner?: IBanner) => {
   const { toast } = useToast();

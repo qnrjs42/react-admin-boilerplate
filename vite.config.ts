@@ -52,7 +52,7 @@ export default defineConfig({
       },
       {
         find: '@constants',
-        replacement: path.resolve(__dirname, 'src/shared/constants/index.ts'),
+        replacement: path.resolve(__dirname, 'src/shared/constants'),
       },
       {
         find: '@contracts',

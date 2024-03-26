@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import { STORAGE_KEYS } from '@constants';
+import { STORAGE_KEYS } from '@src/shared/consts/storage';
 
 interface ISidebarStore {
   isSidebarOpen: boolean;

@@ -5,9 +5,9 @@ import { Form, FormField } from '@shadcn-ui/ui';
 
 import { useImageFiles } from '@hooks';
 
-import { INPUT_TYPE_ATTRIBUTES } from '@constants';
-
 import SharedImageFormFieldRender from '@components/ImageFormFieldRender';
+
+import { INPUT_TYPE_ATTRIBUTES } from '@src/shared/consts/common';
 
 type Story = StoryObj<typeof SharedImageFormFieldRender>;
 

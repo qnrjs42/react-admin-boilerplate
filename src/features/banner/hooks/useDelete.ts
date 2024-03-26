@@ -10,7 +10,7 @@ import type { IBanner } from '@entities/banner/types';
 
 import { utilAxiosError } from '@utils/utilAxios';
 
-import { TOAST_DURATION } from '@constants';
+import { TOAST_DURATION } from '@src/shared/consts/common';
 
 const useDeleteBanner = (banner?: IBanner) => {
   const { toast } = useToast();

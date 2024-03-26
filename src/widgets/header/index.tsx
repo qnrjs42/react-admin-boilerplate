@@ -19,7 +19,8 @@ import { AUTH_KEYS } from '@entities/auth/consts';
 
 import { useMeStore } from '@stores';
 
-import { STORAGE_KEYS, TOAST_DURATION } from '@constants';
+import { TOAST_DURATION } from '@src/shared/consts/common';
+import { STORAGE_KEYS } from '@src/shared/consts/storage';
 
 const HeaderWidget: FC = () => {
   const { toast } = useToast();
