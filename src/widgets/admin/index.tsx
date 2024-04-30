@@ -9,14 +9,17 @@ import SidebarWidget from '@widgets/sidebar';
 
 import type { IMenuRoute } from '@typings/common';
 
+import useMeStore from '@stores/me';
+
 import { LIST_REGEXP } from '@src/shared/consts/regexp';
-import { NESTED_ROUTES } from '@src/shared/consts/routes';
 
 const AdminWidget: FC = () => {
   const location = useLocation();
   const params = useParams();
 
   const [currentRoute, setCurrentRoute] = useState<IMenuRoute | null>(null);
+
+  const me = useMeStore(state => state.me);
 
   useEffect((): void => {
     if (location.pathname.includes('dashboard')) {
@@ -28,7 +31,7 @@ const AdminWidget: FC = () => {
         isShow: false,
       });
     } else {
-      NESTED_ROUTES?.forEach(routes => {
+      me?.routes?.forEach(routes => {
         routes.forEach(route => {
           const routePath = route.path.replace(LIST_REGEXP, ''); // /admin/manager/all-list/1 -> /admin/manager/all-list
           const locationPath = location.pathname.replace(LIST_REGEXP, ''); // /admin/manager/all-list/1 -> /admin/manager/all-list
@@ -44,11 +47,11 @@ const AdminWidget: FC = () => {
         });
       });
     }
-  }, [location, params?.id]);
+  }, [location, me?.routes, params?.id]);
 
   return (
     <div className='max-w[1920px] mx-auto flex'>
-      <SidebarWidget currentRoute={currentRoute} nestedRoutes={NESTED_ROUTES} />
+      <SidebarWidget currentRoute={currentRoute} nestedRoutes={me?.routes} />
       <RightWidget>
         <HeaderWidget />
         <div className='relative h-full'>
