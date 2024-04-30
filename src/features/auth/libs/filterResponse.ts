@@ -32,16 +32,19 @@ export const filterAuthCertifyResponse = (
         break;
       case AUTH_CERTIFY_MENU_CODES.BANNERS.MODIFY:
         filteredAuthority.banner.modify = true;
-        filteredNestedRoutes[0].push(nestedRoutes[0][4]); // 배너 수정
         break;
       case AUTH_CERTIFY_MENU_CODES.BANNERS.DELETE:
         filteredAuthority.banner.delete = true;
+        break;
+      default:
         break;
     }
   });
 
   return {
-    filteredNestedRoutes: filteredNestedRoutes.filter(routes => routes.length > 1),
+    filteredNestedRoutes: filteredNestedRoutes.map(routes =>
+      routes.sort((a, b) => a.order - b.order),
+    ),
     filteredAuthority,
   };
 };
