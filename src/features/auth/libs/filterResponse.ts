@@ -42,9 +42,9 @@ export const filterAuthCertifyResponse = (
   });
 
   return {
-    filteredNestedRoutes: filteredNestedRoutes.map(routes =>
-      routes.sort((a, b) => a.order - b.order),
-    ),
+    filteredNestedRoutes: filteredNestedRoutes
+      .filter(routes => routes.length > 1)
+      .map(routes => routes.sort((a, b) => a.order - b.order)),
     filteredAuthority,
   };
 };
